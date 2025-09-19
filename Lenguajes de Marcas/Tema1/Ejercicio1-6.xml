@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <instituto>
-    <clase>
-        <alumnos>
+        <clase>
             <alumno>
                 <nombre>Juan</nombre>
                 <edad>18</edad>
@@ -12,11 +11,9 @@
                 <edad>21</edad>
                 <notaMedia>10</notaMedia>
             </alumno>
-        </alumnos>
-    </clase>
+        </clase>
 
-    <clase>
-        <alumnos>
+        <clase>
             <alumno>
                 <nombre>Sem</nombre>
                 <edad>20</edad>
@@ -27,8 +24,7 @@
                 <edad>21</edad>
                 <notaMedia>4</notaMedia>
             </alumno>
-        </alumnos>
-    </clase>
+        </clase>
 
 
 </instituto>
