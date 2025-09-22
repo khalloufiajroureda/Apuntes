@@ -1,0 +1,54 @@
+<script>
+    //EJERCICIO 1
+    //1. Declara con let dos variables numéricas: una entera y otra decimal.
+    let numeroEntero = 5
+    let numeroDecimal = 3.14
+    //2. Declara con const una cadena de texto con un saludo.
+    const saludo = "Hola, mundo"
+    //3. Muestra en consola los valores de las tres variables en una sola línea mediante concatenación con +.
+    console.log(numeroEntero + ", " + numeroDecimal + " y " + saludo)
+
+    //EJERCICIO 2
+    //1. Pide al usuario **dos valores** con `prompt()`. Guárdalos en `texto1` y `texto2`
+    let texto1 = prompt("Introduzca el primer valor:")
+    let texto2 = prompt("Introduzca el segundo valor:")
+
+    //2. Muestra en consola el **resultado de la “suma”** `texto1 + texto2` (concatenación).
+    console.log("Concatenacion: " + texto1 + texto2)
+
+    //3. Convierte ambos a número (elige `parseInt`, `parseFloat` o `Number`) y guarda en `numero1` y `numero2`.
+    let numero1 = Number(texto1)
+    let numero2 = Number(texto2)
+
+    //4. Muestra en consola la **suma numérica real** de `numero1 + numero2`
+    let suma= numero1 + numero2
+    console.log(suma)
+
+    //EJERCICIO 3
+    //Declara una cadena con un saludo (por ejemplo, `"Hola, "` ) y otra con un nombre (por ejemplo, `"Ana"`).
+    let saludar = "Hola, "
+    let nombre = "Reda "
+    let caracter = "a"
+
+    //**Concatena** ambas con `+` y muéstralo.
+    console.log("Saludo: " + saludar + nombre)
+
+    //Usa `indexOf()` para buscar la posición de la letra `"a"` (minúscula) en el nombre y muéstrala.
+    let posicion = nombre.indexOf(caracter)
+    console.log("La letra a esta en la posicion " + posicion + " en la variable nombre")
+
+    //4.Usa `charAt()` para mostrar el **primer carácter** del nombre
+    console.log("Primer caracter del nombre " + nombre + "es " + nombre.charAt(0))
+
+    //EJERCICIO 4
+    //1. Declara `let valorNulo = null`.
+    let valorNulo = null
+    //2. Declara `let valorNoDefinido;` (sin asignar).
+    let valorNoDefinido
+    //3. Muestra en consola un mensaje indicando el valor actual de cada una.
+    console.log("valorNulo: " + valorNulo)
+    console.log("valorNoDefinido: " + valorNoDefinido)
+    
+
+
+</script>
