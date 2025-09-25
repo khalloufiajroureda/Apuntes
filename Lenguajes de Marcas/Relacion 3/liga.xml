@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Ejercicio 3 — Liga Pokémon con DTD externa-->
+<!DOCTYPE liga SYSTEM "liga.dtd">
+
+<liga>
+    <entrenador>
+        <nombre>Ash Ketchum</nombre>
+        <pokemon>
+            <nombre>Pikachu</nombre>
+            <tipo>Electrico</tipo>
+            <nivel>1</nivel>
+        </pokemon>
+
+        <pokemon>
+            <nombre>Charmander</nombre>
+            <tipo>Fuego</tipo>
+            <nivel>1</nivel>
+        </pokemon>
+    </entrenador>
+
+    <entrenador>
+        <nombre>Erika</nombre>
+        <pokemon>
+            <nombre>Tauros</nombre>
+            <tipo>Normal</tipo>
+            <nivel>14</nivel>
+        </pokemon>
+
+        <pokemon>
+            <nombre>Dragonite</nombre>
+            <tipo>Normal, Volador</tipo>
+            <nivel>50</nivel>
+        </pokemon>
+
+    </entrenador>
+
+</liga>

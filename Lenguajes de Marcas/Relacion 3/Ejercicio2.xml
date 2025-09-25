@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Ejercicio 2 — Equipo Pokémon (cardinalidades)
+**Objetivo:** Usar `+` y `*`.-->
+
+<!DOCTYPE equipo [
+    <!ELEMENT equipo (pokemon+)>
+    <!ELEMENT pokemon (nombre, tipo+, nivel)>
+    <!ELEMENT nombre (#PCDATA)>
+    <!ELEMENT tipo (#PCDATA)>
+    <!ELEMENT nivel (#PCDATA)>
+]>
+
+<equipo>
+    <pokemon>
+        <nombre>Pikachu</nombre>
+        <tipo>Electrico</tipo>
+        <nivel>1</nivel>
+    </pokemon>
+</equipo>
