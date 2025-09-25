@@ -3,7 +3,7 @@
 Crea un documento XML que contenga una lista de **3 libros**.  
 Cada libro debe tener: `titulo`, `autor`, `anio`, `editorial`.-->
 <!DOCTYPE pokemon [
-    <!ELEMENT pokemon (nombre, tipo, nivel)>
+    <!ELEMENT pokemon (nombre, tipo, nivel?)>
     <!ELEMENT nombre (#PCDATA)>
     <!ELEMENT tipo (#PCDATA)>
     <!ELEMENT nivel (#PCDATA)>
