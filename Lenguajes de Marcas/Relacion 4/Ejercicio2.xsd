@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="pedidos">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="cliente">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="nombre"/>
+                            <xs:element name="email">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:pattern value="\d{A-Z}"></xs:pattern>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element name="telefono">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:pattern value="\d{3}-\d{3}-\d{3}"></xs:pattern>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+
+    </xs:element>
