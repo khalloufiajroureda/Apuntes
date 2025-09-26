@@ -4,16 +4,34 @@
     let numero2 = Number(prompt("Introduzca el segundo numero: "))
     let operacion = prompt("Introduzca la operacion (`+`, `-`, `*`, `/`): ")
     let resultado
+    let operacionSuma = "+"
+    let operacionResta = "-"
+    let operacionMultiplicacion = "*"
+    let operacionDivision = "/"
 
-    if (operacion == "+") {
-        resultado = numero1 + numero2
-    } else if (operacion == "-") {
-        resultado = numero1 - numero2
-    } else if (operacion == "*") {
-        resultado = numero1 * numero2
-    }else if ( operacion == "/") {
-        resultado = numero1 / numero2
-    }console.log("El resultado de su operacion es de: " + resultado)
+    if (!isNaN(numero1) && !isNaN(numero2)) {
+        if (operacion == "+") {
+            resultado = numero1 + numero2
+            console.log("El resultado de su operacion es de: " + resultado)
+        } else if (operacion == "-") {
+            resultado = numero1 - numero2
+            console.log("El resultado de su operacion es de: " + resultado)
+        } else if (operacion == "*") {
+            resultado = numero1 * numero2
+            console.log("El resultado de su operacion es de: " + resultado)
+        } else if (operacion == "/") {
+            if (numero2 != 0)
+                resultado = numero1 / numero2
+            } else {
+            console.log("No se puede dividir entre 0")
+        }
+    
+    }   else {
+            console.log("Operador Incorrecto")
+    }
+    
+    condole.log("El resultado de " + numero1 + operacion + numero2 + " es " + resultado)
+
 
 
 
