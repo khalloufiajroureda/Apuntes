@@ -1,0 +1,16 @@
+<script>
+    //19. **Cálculo de coste de estacionamiento**:
+    let tiempoEstacionado = Number(prompt("Indique el tiempo que estuvo estacionado (en horas): "))
+    let coste = 0
+
+    if (tiempoEstacionado > 0 && tiempoEstacionado <= 2) {
+        coste = tiempoEstacionado * 5
+        console.log("El total a pagar es de: " + coste + "€")
+    } else if (tiempoEstacionado > 2 && tiempoEstacionado <= 5) {
+        coste = tiempoEstacionado * 4
+        console.log("El total a pagar es de: " + coste + "€")
+    } else {
+        coste = (5 * 4) + ((tiempoEstacionado - 5) * 3)
+        console.log("El total a pagar es de: " + coste + "€")
+    }
+</script>

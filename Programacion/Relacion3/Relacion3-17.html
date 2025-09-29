@@ -1,0 +1,16 @@
+<script>
+    //17. **Calcular el precio de una llamada telefónica**:
+    let duracionLlamada = Number(prompt("Introduzca la duracion de su llamada (En minutos) "))
+    let coste = 0
+
+    if (duracionLlamada <= 3) {
+        coste = 0
+        console.log("Su llamada es gratuita")
+    } else if (duracionLlamada > 3 && duracionLlamada < 10) {
+        coste = (duracionLlamada - 3) * 0.50
+        console.log("Su llamada cuesta : " + coste + "€")
+    } else {
+        coste = (7 * 0.50) + ((duracionLlamada - 10) * 0.30)
+        console.log("Su llamada cuesta : " + coste + "€")
+    }
+</script>

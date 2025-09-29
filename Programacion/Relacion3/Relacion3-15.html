@@ -2,13 +2,15 @@
     //15. **Determinar el tipo de ángulo**:
     let valorAngulo = Number(prompt("Introduzca el valor de un angulo: "))
     
-    if (valorAngulo < 90) {
+    if (valorAngulo > 0 && valorAngulo < 90) {
         console.log("Ángulo agudo")
     } else if (valorAngulo == 90) {
         console.log("Ángulo recto")
     } else if (valorAngulo > 90 && valorAngulo < 180) {
         console.log("Ángulo obtuso")
-    } else {
+    } else if (valorAngulo == 180) {
         console.log("Ángulo llano")
+    } else {
+        console.log("El numero introducido no es correcto")
     }
 </script>

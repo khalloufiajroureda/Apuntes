@@ -1,0 +1,13 @@
+<script>
+    //18. **Sistema de becas basado en promedio y situación económica**:
+    let promedioAcademico = Number(prompt("Introduzca su nota: "))
+    let ingresoFamiliar = Number(prompt("Introduzca su ingreso familiar anual: "))
+
+    if (promedioAcademico >= 8 && ingresoFamiliar < 20000) {
+        console.log("Usted recibe una beca completa")
+    } else if (promedioAcademico >= 8 && ingresoFamiliar >= 20000) {
+        console.log("Usted recibe una beca parcial")
+    } else {
+        console.log("Usted no recibe beca")
+    }
+</script>
