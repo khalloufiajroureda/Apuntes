@@ -1,14 +1,22 @@
 <script>
     //6. **Calculadora de impuestos progresivos**:
     let salarioAnual = Number(prompt("Introduzca su salario anual: "))
+    let impuesto = 0
 
-    if (salarioAnual == 0 && salarioAnual < 10000) {
-        console.log("0% de impuestos a pagar")
-    } else if (salarioAnual >= 10000 && salarioAnual < 20000) {
-        console.log("El impuesto a pagar es de un 10%")
-    } else if (salarioAnual >= 20000 && salarioAnual < 40000) {
-        console.log("El impuesto a pagar es de un 20%")
+    if (salarioAnual <= 0) {
+        console.log("Que lastima...")
+    } else if (salarioAnual <= 10000) {
+        console.log("Usted no paga impuestos")
     } else {
-        console.log("El impuesto a pagar es de un 30%")
+        if (salarioAnual <= 20000) {
+            impuesto = salarioAnual * 0.1
+            console.log("El total de impuestos a pagar es de : " + impuesto + " €")
+        } else if (salarioAnual <= 40000) {
+            impuesto = salarioAnual * 0.2
+            console.log("El total de impuestos a pagar es de : " + impuesto + " €")
+        } else {
+            impuesto = salarioAnual * 0.3
+            console.log("El total de impuestos a pagar es de : " + impuesto + " €")
+        }
     }
 </script>

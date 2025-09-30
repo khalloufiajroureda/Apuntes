@@ -1,0 +1,19 @@
+<script>
+    //22. **Determinar el ganador de un juego de piedra, papel o tijera**:
+    let jugador1 = prompt("Elige piedra, papel o tijera: ")
+    let jugador2 = prompt("Elige piedra, papel o tijera: ")
+    jugador1 = jugador1.toLowerCase()
+    jugador2 = jugador2.toLowerCase()
+
+    let piedra = "piedra"
+    let papel = "papel"
+    let tijera = "tijera"
+
+    if (jugador1 == jugador2) {
+        console.log("Empate!")
+    } else if ((jugador1 == piedra && jugador2 == tijera) || (jugador1 == tijera && jugador2 == papel) || (jugador1 == papel && jugador2 == piedra)) {
+        console.log("Jugador 1 ha ganado la partida")
+    } else {
+        console.log("Jugador 2 ha ganado la partida")
+    }
+</script>

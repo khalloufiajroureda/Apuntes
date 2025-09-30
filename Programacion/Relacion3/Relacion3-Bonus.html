@@ -1,0 +1,23 @@
+<script>
+    //BONUS. **Calculadora de impuestos progresivos**
+    let salarioAnual = Number(prompt("Introdcuzca su salario anual: "))
+    let impuesto = 0
+    let efectivo = 0
+    
+    if (salarioAnual >= 0 && salarioAnual <= 10000) {
+        console.log("Usted todavia no paga impuestos")
+    } else {
+        if (salarioAnual > 10000 && salarioAnual <= 20000) {
+            impuesto = salarioAnual * 0.1
+            console.log("Usted paga " + impuesto + " €")
+        } else if (salarioAnual > 20000 && salarioAnual <= 40000) {
+            impuesto = salarioAnual * 0.2
+            console.log("Usted paga " + impuesto + " €")
+        } else {
+            impuesto = salarioAnual * 0.3
+            console.log("Usted paga " + impuesto + " €")
+        }
+        efectivo = impuesto / 100
+        console.log("Tipo de efectivo: " + efectivo + " %")
+    }
+</script>
