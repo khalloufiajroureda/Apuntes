@@ -2,7 +2,7 @@
 ## Introducción Avanzada a Git 
 
 <p align="center">
-  <img src= https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSO3YMqf_hC9opnAZP_l4PHZLwAUc5pghj8PQ&salt="Ejemplos de CMS" width="500"/>
+  <img src= https://i0.wp.com/unaaldia.hispasec.com/wp-content/uploads/2018/06/877f2-git-logo.png?ssl=1="Ejemplos de CMS" width="500"/>
   <br>
 </p>
 
