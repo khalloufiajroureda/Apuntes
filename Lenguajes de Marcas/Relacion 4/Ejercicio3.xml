@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<calendario xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="Ejercicio3.xsd">
+
+<calendario codigoPostal="18195">
+    <evento>
+        <titulo>Granada Latina Festival</titulo>
+        <fecha>20/06/2026</fecha>
+        <hora>16:00</hora>
+        <ubicacion>Cortijo el conde</ubicacion>
+    </evento>
+</calendario>
