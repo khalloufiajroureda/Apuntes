@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--**Ejercicio 2 – Pedidos Online**-->
 <pedidos xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="Ejercicio2.xsd">
-<pedidos>
   <pedido codigo="A101">
     <cliente>
       <nombre>Ana García</nombre>
