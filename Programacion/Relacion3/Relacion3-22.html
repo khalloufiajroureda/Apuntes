@@ -13,7 +13,9 @@
         console.log("Empate!")
     } else if ((jugador1 == piedra && jugador2 == tijera) || (jugador1 == tijera && jugador2 == papel) || (jugador1 == papel && jugador2 == piedra)) {
         console.log("Jugador 1 ha ganado la partida")
-    } else {
+    } else  if ((jugador2 == piedra && jugador1 == tijera) || (jugador2 == tijera && jugador1 == papel) || (jugador2 == papel && jugador1 == piedra)){
         console.log("Jugador 2 ha ganado la partida")
+    } else {
+        console.log("Entrada no válida. Debe escribir: piedra, papel o tijera.")
     }
 </script>
