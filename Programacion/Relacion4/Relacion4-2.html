@@ -1,9 +1,11 @@
 <script>
 let numeroIntroducido = Number(prompt("Introduzca un numero secreto (Del 1 al 10): "))
-let numeroSecreto = 8
+let intento = Number(prompt("Introduza el numero secreto: "))
 
-while (numeroIntroducido != numeroSecreto) {
-    console.log("Intenta de nuevo")
+while (numeroIntroducido != intento) {
+    console.log("Numero " + intento + " es incorrecto")
+    intento = prompt("Introduza el numero secreto: ")
+
 } console.log("¡Correcto! Has adivinado el número.")
 
 

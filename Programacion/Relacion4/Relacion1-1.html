@@ -2,9 +2,11 @@
 
     let numeroEntero = Number(prompt("Introduzca un numero: "))
     let multiplicacion = 0
+    let iteracion = 0
 
-    for (let i = 0; i <= 10; i++) {
-        multiplicacion = numeroEntero * i
-        console.log(numeroEntero + " X " + i + " = " + multiplicacion )
+    for (let i = 0; i < 10; i++) {
+        iteracion = i + 1
+        multiplicacion = numeroEntero * iteracion
+        console.log(numeroEntero + " X " + iteracion  + " = " + multiplicacion)
     }
 </script>
