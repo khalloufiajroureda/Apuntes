@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xsi="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="agencia">
+        <complexType>
+            <sequence>
+                <xs:element name="paquete" maxOccurs="unbouned"/>
+                    <complexType>
+                        <sequence>
+                            <xs:element name="destino">
+                                <simpleType>
+                                    <xs:restriction use="required"></xs:restriction>
+                                </simpleType>
+                            </xs:element>
+                            <xs:element name="precio">
+                                <simpleType>
+                                    <xs:restriction base="xs:decimal">
+                                    <xs:minInclusive value="0"/>
+                                    </xs:restriction>
+                                </simpleType>
+                            </xs:element>
+                        </sequence>
+                    </complexType>
+            </sequence>
+        </complexType>
+    </xs:element>

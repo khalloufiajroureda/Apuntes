@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<agencia xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="AgenciaViajes.xsd">
+    <paquete codigo="PKT-2347">
+        <destino>Granada</destino>
+        <precio>74.90</precio>
+        <fechaInicio>10/10/2025</fechaInicio>
+        <fechaFin>15/11/2025</fechaFin>
+        <tipo>Aventura</tipo>
+    </paquete>
+    <paquete codigo="PKT-4517">
+        <destino>Malaga</destino>
+        <precio>210,75</precio>
+        <fechaInicio>08/04/2025</fechaInicio>
+        <fechaFin>17/06/2025</fechaFin>
+        <tipo>Familiar</tipo>
+    </paquete>
+    <clientes>
+        <cliente>
+            <nombre>Reda</nombre>
+            <dni>77024605C</dni>
+            <edad>21</edad>
+            <email>redakhalloufiajrou@gmail.com</email>
+        </cliente>
+        <cliente>
+            <nombre>Sem</nombre>
+            <dni>37469675D</dni>
+            <edad>19</edad>
+            <email>semperegrinalopez@gmail.com</email>
+        </cliente>
+    </clientes>
