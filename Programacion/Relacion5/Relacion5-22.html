@@ -1,0 +1,19 @@
+<script>
+    //Solicitar un número entero. Dibujar una pirámide con tantas filas como indique el número.
+//*****
+//****
+//***
+//**
+//*
+    let tamanio = Number(prompt("Introduzca el tamaño de la piramide: "))
+    let fila = ""
+    let asteriscos = ""
+    const ASTERISCOS = "*"
+
+    for (let i = 0; i < tamanio; i++) {
+        asteriscos = ASTERISCOS.repeat(tamanio - i)
+
+            fila = asteriscos
+        console.log(fila)
+    }
+</script>

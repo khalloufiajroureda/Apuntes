@@ -1,0 +1,19 @@
+<script>
+    //Solicitar un número entero. Calcular si el número introducido es primo o no, y si no lo es, calcular el siguiente número primo.
+    let numero = Number(prompt("Introduzca un numero: "))
+    let interaccion = 2
+
+    while (numero != interaccion) {
+        interaccion = 2
+        while (numero % interaccion != 0) {
+        interaccion++
+        
+    } if(interaccion != numero)
+        numero++
+    }
+    if (numero == interaccion) {
+        console.log("El numero " + numero + " es primo.")
+    } else {
+        console.log("El numero " + numero + " NO primo.")
+    }
+</script>
