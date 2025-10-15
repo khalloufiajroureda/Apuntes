@@ -5,18 +5,18 @@
     // mientras su saldo no se quede por debajo de cero.
 
     let saldoTotal = 1000
-    let saldoRetirado = 0
-    let retiro = Number(prompt("Introduzca saldo a retirar: "))
+    let saldoRetirado = Number(prompt("Saldo: " + saldoTotal + " ||  Introduzca saldo a retirar: "))
+    let retiro = 0
 
     while( saldoTotal > 0){
-        saldoRetirado = prompt("Introduzca saldo a retirar: ")
         saldoTotal  = saldoTotal - saldoRetirado
+        saldoRetirado = prompt("Saldo: " + saldoTotal + " ||  Introduzca saldo a retirar: " + saldoRetirado)
 
         if (saldoTotal == saldoRetirado){
         alert("Te has quedado sin saldo ¡A trabajar!")
         } else if (saldoTotal < saldoRetirado){
-            
-        }
+        alert("Saldo insuficiente.")
+        } else 
 
 
         console.log("Su saldo es de: " + saldoTotal)

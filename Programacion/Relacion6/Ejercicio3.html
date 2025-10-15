@@ -1,0 +1,25 @@
+<script>
+    //### 3. Dividir cuentas y calcular propinas
+    //Crea un programa para dividir cuentas y calcular propinas. 
+    //El programa debe pedir productos de una cuenta hasta que el usuario introduce un 0.
+    //Luego pide el número de personas y el porcentaje de propina que quieren dejar.
+    //Calcula el total con propina y cuánto debe pagar cada persona.
+
+    let numeroProductos = 1
+    let producto = Number(prompt("Precio del producto " + numeroProductos + " :"))
+    let cantidadPropina = Number(prompt("¿Cuánta propina quieres dejar?: "))
+    let propina = 0
+    let sumatorio = 0
+    let numeroPersonas = Number(prompt("¿Cúantas personas sois?: "))
+
+    while( producto != 0)  {
+        numeroProductos += 1
+        
+        if (cantidadPropina >=0 && cantidadPropina <= 5 (-1)){
+            propina = (producto + numeroProductos) * cantidadPropina / 100
+            sumatorio = producto + numeroProductos
+            console.log("Total sin propina: " + sumatorio )
+            console.log("Total con propina del " + cantidadPropina + " %: ")
+        }
+    }
+</script>
