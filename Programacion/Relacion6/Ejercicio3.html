@@ -5,21 +5,32 @@
     //Luego pide el número de personas y el porcentaje de propina que quieren dejar.
     //Calcula el total con propina y cuánto debe pagar cada persona.
 
-    let numeroProductos = 1
-    let producto = Number(prompt("Precio del producto " + numeroProductos + " :"))
-    let cantidadPropina = Number(prompt("¿Cuánta propina quieres dejar?: "))
+    let contador = 1
+    let precioProductos = 1
+    let totalCuenta = 0
     let propina = 0
-    let sumatorio = 0
-    let numeroPersonas = Number(prompt("¿Cúantas personas sois?: "))
+    let numeroPersonas = 0
+    let cuentaPropina = 0
+    let precioPersona = 0
 
-    while( producto != 0)  {
-        numeroProductos += 1
-        
-        if (cantidadPropina >=0 && cantidadPropina <= 5 (-1)){
-            propina = (producto + numeroProductos) * cantidadPropina / 100
-            sumatorio = producto + numeroProductos
-            console.log("Total sin propina: " + sumatorio )
-            console.log("Total con propina del " + cantidadPropina + " %: ")
-        }
+        while( precioProductos > 0)  {
+            precioProductos= Number(prompt("Precio del producto " + contador + " :"))
+            console.log("Precio del producto " + contador + " : " + precioProductos)
+            contador++
+            totalCuenta += precioProductos
     }
+
+    propina = Number(prompt("¿Cuánta propina quieres dejar?: "))
+    console.log("¿Cuánta propina quieres dejar?: " + propina)
+    numeroPersonas = Number(prompt("¿Cúantas personas sois?: "))
+    console.log("¿Cúantas personas sois?: " + numeroPersonas)
+
+    console.log("Total sin propina: " + totalCuenta)
+    cuentaPropina = totalCuenta + (totalCuenta *(propina / 100))
+    console.log("Total con propina del " + propina + " %: " + cuentaPropina + "€")
+    precioPersona = cuentaPropina / numeroPersonas
+    console.log("Precio por cabeza: " + precioPersona + "€")
+
+
+
 </script>
