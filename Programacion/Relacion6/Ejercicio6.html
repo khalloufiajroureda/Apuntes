@@ -1,20 +1,35 @@
 <script>
-    //### 6.- Crea una calculadora básica de dos números. 
-    //El programa pide dos números y luego una operación (+, -, *, /).
-    //El programa pide números hasta que el usuario indica "SALIR"
+  //### 6.- Crea una calculadora básica de dos números.
+  //El programa pide dos números y luego una operación (+, -, *, /).
+  //El programa pide números hasta que el usuario indica "SALIR"
 
-    let numero1
-    let numero2
-    let operacion
+  let numero1;
+  let numero2;
+  let operacion;
+  let resultado;
 
-    while(numero1 != "SALIR" && numero2 != "SALIR" && operacion != "SALIR"){
-        
-        
+  while (numero1 != "SALIR" && numero2 != "SALIR" && operacion != "SALIR") {
+    numero1 = Number(prompt("Introduce el primer número: "));
+
+    if (numero1 != "SALIR") {
+      numero2 = Number(prompt("Introduce el segundo número: "));
+      if (numero2 != "SALIR") {
+        operacion = prompt("Introduce la operación: ");
+
+        if (operacion != "SALIR") {
+          if (operacion == "+") {
+            resultado = numero1 + numero2;
+          } else if (operacion == "-") {
+            resultado = numero1 - numero2;
+          } else if (operacion == "*") {
+            resultado = numero1 * numero2;
+          } else {
+            resultado = numero1 / numero2;
+          }
+          alert("El resultado de " + numero1 + operacion + numero2 + " es " + resultado)
+        }
+      }
     }
-
-
-
-
-
-
+  }
+  
 </script>

@@ -1,0 +1,36 @@
+<script>
+    let contadorCoches = 1
+    let coche
+    let tiempoBoxes
+    let tiempoMedio
+    let totalCoches = 0
+    let sumatorio = 0
+    let cocheRapido = ""
+
+    while(coche != "FIN"){
+        coche = prompt("Nombre del coche " + contadorCoches + ": ")
+        console.log("Nombre del coche " + contadorCoches + ": " + coche)
+        contadorCoches++
+        if(coche != "FIN"){
+            tiempoBoxes = Number(prompt("Tiempo en boxes: "))
+            sumatorio += tiempoBoxes
+            console.log("Tiempo en boxes: " + tiempoBoxes)
+        }
+        
+        if(tiempoBoxes >=0 || tiempoBoxes <= 3){
+            cocheRapido = 
+        }
+    }
+
+        totalCoches = contadorCoches - 2
+        console.log("Total de coches: " + totalCoches);
+        tiempoMedio = sumatorio / totalCoches
+        console.log("Tiempo medio: " + tiempoMedio + " segundos.");
+        
+
+
+    
+
+
+
+</script>
