@@ -1,0 +1,58 @@
+<script>
+//Escribe un programa que permita al usuario ingresar las temperaturas registradas durante una semana (7 días). 
+//Una vez ingresadas las temperaturas, el programa debe mostrar al usuario un menú con las siguientes opciones:
+
+//1. Mostrar la temperatura más alta registrada.
+//2. Mostrar la temperatura más baja registrada.
+//3. Calcular la temperatura promedio de la semana.
+//4. Salir del programa.
+
+//El programa debe ejecutarse hasta que el usuario elija la opción de salir.
+
+
+const SEMANA = 7
+let temperatura = 0
+let temperaturas =[]
+let temperaturaMax = 0
+let temperaturaMin = 0
+let diaFrio = ""
+let diaCalor = ""
+let promedioTemp = 0 
+let promedioSemana = 0
+
+for(let i = 1; i <= SEMANA; i++){
+    temperatura= Number((prompt("Ingrese las temperaturas registradas del dia " + i + ": ")))
+    temperaturas.push(temperatura)
+    promedioTemp += temperatura
+    if(i == 0){
+        temperaturaMax == temperatura
+        temperaturaMin == temperatura
+    }
+    if(temperatura > temperaturaMax){
+        temperaturaMax = temperatura
+    }
+    if (temperatura < temperaturaMin) {
+        temperaturaMin = temperatura
+    }
+    
+}
+let menu = Number(prompt("Seleccione una de las siguientes opciones: " +
+"\n1. Mostrar la temperatura más alta registrada." +
+"\n2. Mostrar la temperatura más baja registrada." +
+"\n3. Calcular la temperatura promedio de la semana." +
+"\n4. Salir del programa."))
+
+while (menu != 4) {
+    if (menu == 1) {
+        console.log("La temperatura más alta registrada es: " + temperaturaMax + "°C" );
+    } else if (menu == 2) {
+        console.log("La temperatura más baja registrada es: " + temperaturaMin + "°C" );
+    } else if (menu == 3) {
+        promedioSemana = (promedioTemp / SEMANA).toFixed(2)
+        console.log("La temperatura promedio de la semana es: " + promedioSemana + "°C" );
+    }else {
+        menu = Number(prompt("Vuelva a introducir una de las siguientes opciones: "))
+    }
+}
+
+</script>
