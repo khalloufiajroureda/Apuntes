@@ -10,7 +10,7 @@
 //El programa debe ejecutarse hasta que el usuario elija la opción de salir.
 
 
-const SEMANA = 7
+const SEMANA = [7]
 let temperatura = 0
 let temperaturas =[]
 let temperaturaMax = 0
@@ -20,19 +20,19 @@ let diaCalor = ""
 let promedioTemp = 0 
 let promedioSemana = 0
 
-for(let i = 1; i <= SEMANA; i++){
-    temperatura= Number((prompt("Ingrese las temperaturas registradas del dia " + i + ": ")))
-    temperaturas.push(temperatura)
-    promedioTemp += temperatura
-    if(i == 0){
-        temperaturaMax == temperatura
-        temperaturaMin == temperatura
-    }
-    if(temperatura > temperaturaMax){
-        temperaturaMax = temperatura
-    }
-    if (temperatura < temperaturaMin) {
-        temperaturaMin = temperatura
+for(let i = 0; i <= SEMANA; i++){
+    temperatura = Number((prompt("Ingrese las temperaturas registradas del dia " + SEMANA(i) + ": ")))
+    temperaturas[i] = temperatura
+    promedioTemp += temperaturas
+    for(let i = 1; i < temperaturas.length; i++){
+        if(i == 0){
+            temperaturas[i] > temperaturaMax
+            temperaturaMax = temperaturas[i]
+        }
+        if (i == 0) {
+            temperaturas[i] < temperaturaMin
+            temperaturaMin = temperaturas[i]
+        }
     }
     
 }
