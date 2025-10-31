@@ -1,0 +1,41 @@
+<script>
+  //Escribe un programa que permita al usuario gestionar el inventario de una librería.
+  // El programa debe usar dos arrays: uno para almacenar los títulos de los libros y otro para almacenar las cantidades disponibles de cada libro.
+  // El usuario debe poder realizar las siguientes acciones a través de un menú:
+
+  //1-Añadir un nuevo libro al inventario (con su título y cantidad).
+  //2-Actualizar la cantidad de un libro existente.
+  //3-Ver el inventario completo (título y cantidad de cada libro).
+  //4-Salir del programa.
+
+  //El programa debe actualizar el inventario según las acciones del usuario y seguir ejecutándose hasta que se elija la opción de salir.
+
+  let titulosLibros = [];
+  let cantidadesDisponibles = [];
+  let menu = prompt(
+    "Seleccione una de las siguentes opciones: " +
+    "\n1-Añadir un nuevo libro al inventario." +
+    "\n2-Actualizar la cantidad de un libro existente." +
+    "\n3-Ver el inventario completo" +
+    "\n4-Salir del programa"
+  );
+  let titulo = ""
+  let cantidad = ""
+  let actualizarLibroExistente = ""
+  let actualizarCantidad = ""
+
+  if (menu == 1) {
+    titulo = prompt("Introduce el titulo del libro: ")
+    titulosLibros.push(titulo)
+    cantidad = prompt("Introduce la cantidad: ")
+    cantidadesDisponibles.push(cantidad)
+    console.log("Libro: " +`${titulosLibros}`);
+    console.log("Cantidad: " +`${cantidadesDisponibles}`);
+  }
+  if (menu == 2){
+    actualizarLibroExistente = prompt("¿Que libro quieres actualizar?: ")
+    actualizarCantidad = prompt("Introduzca la nueva cantidad: ")
+    cantidadesDisponibles.shift
+    cantidadesDisponibles.push(actualizarCantidad)
+  }
+</script>
