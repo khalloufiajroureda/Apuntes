@@ -1,0 +1,52 @@
+<script>
+    //Desarrolla un programa que permita registrar y gestionar las calificaciones de los estudiantes en una clase. 
+    //Usa dos arrays: uno para los nombres de los estudiantes y otro para sus calificaciones. 
+    //El programa debe ofrecer al usuario un menú con las siguientes opciones:
+
+//1. Añadir un estudiante y su calificación.
+//2. Mostrar la calificación promedio de la clase.
+//3. Mostrar la calificación más alta y el nombre del estudiante correspondiente.
+//4. Mostrar la calificación más baja y el nombre del estudiante correspondiente.
+//5. Salir del programa.
+
+let nombresEstudiantes = []
+let calificaciones = []
+let menu = prompt(
+    "Seleccione una de las siguentes opciones: " +
+    "\n1-Añadir un estudiante y su calificación." +
+    "\n2-Mostrar la calificación promedio de la clase." +
+    "\n3-Mostrar la calificación más alta y el nombre del estudiante correspondiente." +
+    "\n4-Mostrar la calificación más baja y el nombre del estudiante correspondiente." +
+    "\n5-Salir del programa"
+)
+let estudiante = ""
+let calificacion = ""
+let promedio = 0
+let promedioCalificaciones = 0
+    for (let i = menu ; i == 1  ; i) {
+        if(menu == 1){
+            estudiante = prompt("Introduzca el nombre del estudiante: ")
+            nombresEstudiantes.push(estudiante)
+
+            calificacion = prompt("Introduzca su calificacion: ")
+            calificaciones.push(calificacion);
+            
+        } else if (menu == 2) {
+            promedio += calificaciones
+            promedioCalificaciones = promedio / nombresEstudiantes
+            console.log("La nota promedio de la clase es de: " + promedioCalificaciones);
+        }
+
+    }
+    menu = prompt(
+            "Seleccione una de las siguentes opciones: " +
+            "\n1-Añadir un estudiante y su calificación." +
+            "\n2-Mostrar la calificación promedio de la clase." +
+            "\n3-Mostrar la calificación más alta y el nombre del estudiante correspondiente." +
+            "\n4-Mostrar la calificación más baja y el nombre del estudiante correspondiente." +
+            "\n5-Salir del programa"
+        )
+        
+    
+
+</script>

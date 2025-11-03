@@ -10,32 +10,49 @@
 
   //El programa debe actualizar el inventario según las acciones del usuario y seguir ejecutándose hasta que se elija la opción de salir.
 
-  let titulosLibros = [];
-  let cantidadesDisponibles = [];
-  let menu = prompt(
-    "Seleccione una de las siguentes opciones: " +
-    "\n1-Añadir un nuevo libro al inventario." +
-    "\n2-Actualizar la cantidad de un libro existente." +
-    "\n3-Ver el inventario completo" +
-    "\n4-Salir del programa"
-  );
-  let titulo = ""
-  let cantidad = ""
-  let actualizarLibroExistente = ""
-  let actualizarCantidad = ""
+        let titulosLibros = [];
+        let cantidadesDisponibles = [];
+        let menu = prompt(
+            "Seleccione una de las siguentes opciones: " +
+            "\n1-Añadir un nuevo libro al inventario." +
+            "\n2-Actualizar la cantidad de un libro existente." +
+            "\n3-Ver el inventario completo" +
+            "\n4-Salir del programa"
+          );
+        let titulo = ""
+        let cantidad = ""
+        let actualizarLibroExistente = ""
+        let actualizarCantidad = ""
 
-  if (menu == 1) {
-    titulo = prompt("Introduce el titulo del libro: ")
-    titulosLibros.push(titulo)
-    cantidad = prompt("Introduce la cantidad: ")
-    cantidadesDisponibles.push(cantidad)
-    console.log("Libro: " +`${titulosLibros}`);
-    console.log("Cantidad: " +`${cantidadesDisponibles}`);
-  }
-  if (menu == 2){
-    actualizarLibroExistente = prompt("¿Que libro quieres actualizar?: ")
-    actualizarCantidad = prompt("Introduzca la nueva cantidad: ")
-    cantidadesDisponibles.shift
-    cantidadesDisponibles.push(actualizarCantidad)
-  }
+        for (let i = 1; i <= menu; i) {
+
+          if (menu == 1) {
+            titulo = prompt("Introduce el titulo del libro: ")
+            titulosLibros.push(titulo)
+            cantidad = prompt("Introduce la cantidad: ")
+            cantidadesDisponibles.push(cantidad)
+            console.log("Libro: " +`${titulosLibros[0]}`+ " tiene : " + `${cantidadesDisponibles[0]}` );
+            
+          }
+          if (menu == 2){
+            actualizarLibroExistente = prompt("¿Que libro quieres actualizar?: ")
+            actualizarCantidad = prompt("Introduzca la nueva cantidad: ")
+            cantidadesDisponibles.shift
+            cantidadesDisponibles.push(actualizarCantidad)
+          }
+          if(menu == 3){
+            for (let i = 0; i < titulosLibros.length && i < cantidadesDisponibles; i++) {
+              console.log("El libro " +`${titulosLibros[i]}`+ " tiene disponible " + `${cantidadesDisponibles[i]}` + " unidades." );
+            }
+
+          }
+          menu = prompt(
+            "Seleccione una de las siguentes opciones: " +
+            "\n1-Añadir un nuevo libro al inventario." +
+            "\n2-Actualizar la cantidad de un libro existente." +
+            "\n3-Ver el inventario completo" +
+            "\n4-Salir del programa"
+          );
+        }
+          
 </script>
