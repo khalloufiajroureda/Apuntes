@@ -9,8 +9,8 @@
     //4. Mostrar la calificación más baja y el nombre del estudiante correspondiente.
     //5. Salir del programa.
 
-    let nombresEstudiantes = []
-    let calificaciones = []
+    let nombresEstudiantes = ["reda", "alex", "sem", "iker", "mario"]
+    let calificaciones = [2, 3, 4, 5, 10]
     let menu = prompt(
         "Seleccione una de las siguentes opciones: " +
         "\n1-Añadir un estudiante y su calificación." +
@@ -21,22 +21,51 @@
     )
     let estudiante = ""
     let calificacion = ""
-    let promedio = 0
+    let totalSuma = 0
     let promedioCalificaciones = 0
+    let notaAlta = 0
+    let notaBaja = 1000
+    let estudianteNotaAlta = ""
+    let estudianteNotaBaja = ""
 
     while (menu != 5) {
         if (menu == 1) {
             estudiante = prompt("Introduzca el nombre del estudiante: ")
             nombresEstudiantes = estudiante
 
-            calificacion = prompt("Introduzca su calificacion: ")
+            calificacion = Number(prompt("Introduzca su calificacion: "))
             calificaciones.push(calificacion);
-
-        } else if (menu == 2) {
-            promedio += calificaciones
-            promedioCalificaciones = promedio / nombresEstudiantes
-            console.log("La nota promedio de la clase es de: " + promedioCalificaciones);
         }
+
+        if (menu == 2) {
+            for (let i = 0; i < calificaciones.length; i++) {
+                totalSuma += calificaciones[i]
+
+            }
+            promedioCalificaciones = totalSuma / calificaciones.length
+            console.log("La nota promedio de la clase es de: " + promedioCalificaciones.toFixed(1));
+        }
+
+        if (menu == 3) { 
+            for (let i = 0; i < calificaciones.length; i++) {
+                if (calificaciones[i] > notaAlta) {
+                    notaAlta = calificaciones[i]
+                    estudianteNotaAlta = nombresEstudiantes[i]
+                }
+            }
+            console.log("La nota mas alta es un: " + notaAlta + " y es de: " + estudianteNotaAlta);
+        }
+
+        if (menu == 4) {
+            for (let i = 0; i < calificaciones.length; i++) {
+                if (calificaciones[i] < notaBaja) {
+                    notaBaja = calificaciones[i]
+                    estudianteNotaBaja = nombresEstudiantes[i]
+                }
+            }
+            console.log("La nota mas baja es un: " + notaBaja + " y es de: " + estudianteNotaBaja);
+        }
+
         menu = prompt(
             "Seleccione una de las siguentes opciones: " +
             "\n1-Añadir un estudiante y su calificación." +
