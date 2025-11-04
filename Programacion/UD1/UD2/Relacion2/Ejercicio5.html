@@ -9,8 +9,8 @@
     //4. Mostrar la calificación más baja y el nombre del estudiante correspondiente.
     //5. Salir del programa.
 
-    let nombresEstudiantes = ["reda", "alex", "sem", "iker", "mario"]
-    let calificaciones = [2, 3, 4, 5, 10]
+    let nombresEstudiantes = []
+    let calificaciones = []
     let menu = prompt(
         "Seleccione una de las siguentes opciones: " +
         "\n1-Añadir un estudiante y su calificación." +
@@ -51,6 +51,7 @@
                 if (calificaciones[i] > notaAlta) {
                     notaAlta = calificaciones[i]
                     estudianteNotaAlta = nombresEstudiantes[i]
+                    
                 }
             }
             console.log("La nota mas alta es un: " + notaAlta + " y es de: " + estudianteNotaAlta);
