@@ -1,0 +1,22 @@
+<script>
+    //Crea una función llamada `mayor` que reciba dos números y devuelva el mayor de los dos.
+
+    function mayor(a, b) {
+        let resultado = ""
+        if (a > b) {
+            resultado = a
+        } else if (a == b) {
+            resultado = console.log("Los dos numeros introducidos son IGUALES")
+        } else {
+            resultado = b
+        }
+        return resultado
+    }
+
+    let numero1 = Number(prompt("Introduzca el primer numero: "))
+    let numero2 = Number(prompt("Introduzca el segundo numero: "))
+    console.log(mayor(numero1, numero2));
+    
+
+
+</script>

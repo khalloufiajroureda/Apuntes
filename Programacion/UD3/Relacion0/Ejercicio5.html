@@ -1,0 +1,19 @@
+<script>
+    //Haz una función llamada `factorial` que reciba un número 
+    //y devuelva su factorial calculado de forma iterativa.
+
+    function factorial(numero) {
+
+        let factorialCalculo = 1
+        for (let i = 1; i <= numero; i++) {
+            factorialCalculo *= i
+        }
+        return factorialCalculo
+    }
+
+    let numero1 = Number(prompt("Introduzca un numero: "))
+    console.log(factorial(numero1));
+    
+
+
+</script>
