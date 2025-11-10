@@ -1,0 +1,19 @@
+<script>
+    //1. **Encuentra el Elemento Más Largo**
+    //- Dado un array de palabras, escribe una función que encuentre la palabra más larga.
+    //- Ejemplo: `["apple", "banana", "kiwi", "watermelon"]` debería devolver `"watermelon"`.
+
+//*Solución SIN función:*
+
+let frutas = ["apple", "banana", "kiwi", "watermelon"]
+
+let palabraLarga = []
+
+for (let i = 0; i < frutas.length; i++) {
+    frutas[i].length > palabraLarga.length
+    palabraLarga = frutas[i]
+}
+
+console.log(palabraLarga);
+
+</script>
