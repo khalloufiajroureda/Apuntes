@@ -2,13 +2,20 @@
     //Crea una función llamada `sumarArray` que reciba un array de números 
     //y devuelva la suma de todos sus elementos.
 
-    
-    function sumarArray(arrayNumeros) {
-        for (let i = 0; i < arrayNumeros; i++) {
-            
-            
+    function sumarArray(arrayDeNumeros) {
+        let totalSuma = 0
+        for (let elemento of arrayDeNumeros) {
+            totalSuma += elemento
         }
+        return totalSuma 
     }
+
+    let sumaNumerosImpares = sumarArray([1,3,5,7,9])
+    alert(sumaNumerosImpares)
+
+    let numerosPares = [2,4,6,8]
+    alert(sumarArray(numerosPares))
+    
 
 
 

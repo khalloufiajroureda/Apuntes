@@ -1,3 +1,20 @@
 <script>
+    //Crea una función llamada `invertirArray` que reciba un array y 
+    //devuelva un nuevo array con los elementos en orden inverso.
+
+    function invertirArray(arrayNumeros) {
+        const LONGITUDARRAY = 5
+        let invertir = ""
+        for (let i = 0; i < LONGITUDARRAY; i++) {
+            invertir = arrayNumeros[arrayNumeros.length - 1 - i]
+        }
+        return invertir
+    }
+
+    let arrayDeNumeros = [10, 20, 30, 40, 50]
+    console.log(invertirArray(arrayDeNumeros));
     
+
+
+
 </script>
