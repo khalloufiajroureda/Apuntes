@@ -1,0 +1,23 @@
+<script>
+    //Crea una función llamada `obtenerImpares` que reciba un array 
+    //y devuelva un nuevo array con los números impares.
+
+    function obtenerImpares(numeros) {
+        let numerosImpares = []
+        for (let elemento of numeros) {
+            if (elemento % 2 != 0) {
+                numerosImpares.push(elemento)
+            }
+            return numerosImpares
+        }
+    }
+
+        let numeros = []
+        const TAMANIOARRAY = 5
+
+        for (let i = 0; i < TAMANIOARRAY; i++) {
+            numeros.push(Math.floor(Math.random()* 100))
+        }
+        alert(numeros)
+        alert(obtenerImpares(numeros))
+</script>

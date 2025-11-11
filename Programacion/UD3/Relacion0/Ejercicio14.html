@@ -1,0 +1,30 @@
+<script>
+    //Crea una función llamada `promedioArray` 
+    //que reciba un array de números y devuelva su promedio.
+
+    function sumarArray(arrayNumeros) {
+        let totalSuma = 0
+        
+        for (let elemento of arrayNumeros) {
+            totalSuma += elemento
+        }
+        return totalSuma
+    }
+
+    function promedioArray(arrayNumeros) {
+        let suma = sumarArray(arrayNumeros)
+        let promedio = suma / arrayNumeros.length
+        return promedio
+    }
+
+    let numerosAleatorios = []
+    const TAMANIOARRAY = 5
+
+    for (let i = 0; i < TAMANIOARRAY; i++) {
+        numerosAleatorios.push(Math.floor(Math.random()* 100))
+        
+    }
+    alert(numerosAleatorios)
+    alert(sumarArray(numerosAleatorios))
+    alert(promedioArray(numerosAleatorios))
+</script>
