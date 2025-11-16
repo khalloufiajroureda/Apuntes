@@ -1,0 +1,68 @@
+<script>
+
+let puntuacionesJugador = [10, 20, 30, 40, 100, 60, 70, 80, 90, 100]
+let menu = prompt("Seleccione una de las siguentes opciones: " +
+    "\n1-Mostrar la puntuación más alta" +
+    "\n2-Mostrar la puntuación más baja" +
+    "\n3-Calcular la puntuación total" +
+    "\n4-Calcular la media" +
+    "\n5-Salir"
+    )
+let puntuacionAlta = 0
+let puntuacionBaja = 0
+let puntuacionTotal = 0
+let puntuacionMedia = 0
+
+    while (menu != 5) {
+        if (menu == 1) {
+            puntuacionAlta = Math.max(...puntuacionesJugador)
+            console.log("La puntuacion mas alta es: " + puntuacionAlta);
+            
+        }
+        if (menu == 2) {
+            puntuacionBaja = Math.min(...puntuacionesJugador)
+            console.log("La puntuacion mas baja es: " + puntuacionBaja);
+            
+        }
+        if (menu == 3){
+            for (let i = 0; i < puntuacionesJugador.length; i++) {
+                puntuacionTotal += puntuacionesJugador[i]
+            }
+            console.log("La puntuacion total es de: " + puntuacionTotal);
+        }
+        if (menu == 4){
+            puntuacionMedia = puntuacionTotal / 10
+            console.log("La media de tus puntos es de: " + puntuacionMedia);
+            
+        }
+
+        menu = prompt("Seleccione una de las siguentes opciones: " +
+        "\n1-Mostrar la puntuación más alta" +
+        "\n2-Mostrar la puntuación más baja" +
+        "\n3-Calcular la puntuación total" +
+        "\n4-Calcular la media" +
+        "\n5-Salir"
+    )
+    }
+        
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>

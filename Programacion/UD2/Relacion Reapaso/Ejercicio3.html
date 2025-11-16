@@ -1,0 +1,37 @@
+<script>
+
+    let cartas = ["carta1", "carta2", "carta3", "carta4", "carta5", "carta6", "carta7", "carta8"]
+    let precios = [10, 20, 30, 40, 50, 60, 70, 80]
+
+    let cartaComprada = ""
+    let cantidadComprada = ""
+    let precioCartaComprada = 0
+    let precio = 0
+
+    while (cartaComprada != "fin") {
+        cartaComprada = prompt("Introduzca el nombre de la carta que desea comprar: ")
+        cantidadComprada = Number(prompt("Introduzca cuantas desea comprar: "))
+        
+        for (let i = 0; i < cartas.length; i++) {
+            precio = precios[i] * cantidadComprada
+            
+        }
+        console.log("Has comprado " + cantidadComprada + " unidades de " + cartaComprada + ". El total a sido: " + precio + "€");
+        
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
