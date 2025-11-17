@@ -1,0 +1,83 @@
+<script>
+
+    let jugadores = []
+    let puntos = []
+    let nuevoJugador = ""
+    let puntosJugador = ""
+
+    let menu = prompt("Seleccione una de las siguentes opciones: " +
+    "\n1-Añadir un jugador" +
+    "\n2-Registrar ronda" +
+    "\n3-Mostrar clasificación" +
+    "\n4-Mostrar jugadores por encima de la media" +
+    "\n5-Reiniciar puntuaciones" +
+    "\n6-Salir"
+    )
+
+    while (menu != 6) {
+        if (menu == 1) {
+            nuevoJugador = prompt("Introduzca el nombre del jugador:")
+            jugadores.push(nuevoJugador)
+        }
+        if (menu == 2 ) {
+            for (let i = 0; i < jugadores.length; i++) {
+                puntosJugador = Number(prompt("Introduzca los puntos de " + jugadores[i]))
+                puntos.push(puntosJugador)
+            }
+            alert("Ronda registrada correctamente")
+        }
+        if (menu == 3) {
+            console.log("CLASIFICACIÓN:");
+            for (let i = 0; i < jugadores.length && i < puntos.length ; i++) {
+                console.log(jugadores[i] + " tiene " + puntos[i] + " puntos.");
+            }
+        }
+        if (menu == 4) {
+        let suma = 0;
+        for (let i = 0; i < puntos.length; i++) {
+            suma += puntos[i];
+        }
+        let media = suma / puntos.length;
+
+        // Mostrar los jugadores por encima de la media
+        let texto = "Jugadores por encima de la media (" + media.toFixed(2) + "):\n";
+
+        for (let i = 0; i < jugadores.length; i++) {
+            if (puntos[i] > media) {
+                texto += jugadores[i] + " (" + puntos[i] + ")\n";
+            }
+        }
+
+        alert(texto);
+            
+        }
+        if (menu == 5) {
+            for (let i = 0; i < puntos.length; i++) {
+                puntos[i] = 0
+            }
+            alert("Puntuaciones reiniciadas")
+            console.log(puntos);
+            
+        }
+        menu = prompt("Seleccione una de las siguentes opciones: " +
+            "\n1-Añadir un jugador" +
+            "\n2-Registrar ronda" +
+            "\n3-Mostrar clasificación" +
+            "\n4-Mostrar jugadores por encima de la media" +
+            "\n5-Reiniciar puntuaciones" +
+            "\n6-Salir"
+    )
+
+
+
+
+    }
+
+
+
+
+
+
+
+
+</script>
