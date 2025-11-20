@@ -1,0 +1,27 @@
+<script>
+    //Haz una función que reciba cuatro horarios en formato de 24 horas (como cadenas: `"19:45"`) 
+    //correspondientes a las horas de inicio y fin de dos citas. 
+    //Determina si se solapan (`true`) o si ambas citas son compatibles (no se solapan: `false`).
+
+    function citasSolapadas(horaIncio1, horaFin1, horaIncio2, horaFin2) {
+        let citas = [horaIncio1, horaFin1, horaIncio2, horaFin2]
+        let horasSinPuntos = []
+        
+            horasSinPuntos.push(citas.replace(":", ""))
+            console.log(horasSinPuntos);
+    
+
+    }
+
+
+    //==================MAIN======================
+
+    console.log(citasSolapadas("14:00", "14:30", "15:00", "16:00"));
+
+
+
+
+
+
+
+</script>
