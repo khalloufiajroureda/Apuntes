@@ -1,0 +1,48 @@
+<script>
+let opcion = 0;
+
+function menu() {
+    let opcion = "";
+    opcion = prompt("Seleccione una opción:\n1. Saludar\n2. Calcular suma\n3. Verificar si un número es par\n4. Salir");
+    return opcion;
+}
+
+function saludar(saludo) {
+    return "Hola " + saludo + "!";
+}
+
+function sumar(num1, num2) {
+    return num1 + num2;
+}
+
+function esPar(numero) {
+    if (numero % 2 == 0) {
+        return true;
+    } else {
+        return false; 
+    }
+}
+
+while (opcion != 4) {
+    if (opcion == 1) {
+        let nombreSaludo = prompt("Ingrese su nombre:");
+        console.log(saludar(nombreSaludo));
+        opcion = menu();
+    } else if (opcion == 2) {
+        let numero1 = parseFloat(prompt("Ingrese el primer número:"));
+        let numero2 = parseFloat(prompt("Ingrese el segundo número:"));
+        console.log("La suma es: " + sumar(numero1, numero2));
+        opcion = menu();
+    } else if (opcion == 3) {
+        let num = parseInt(prompt("Ingrese un número:"));
+        if (esPar(num)) {
+            console.log("El número es par.");
+        } else {
+            console.log("El número es impar.");
+        }
+        opcion = menu();
+    } else {
+        opcion = menu();
+    }
+}
+</script>
