@@ -1,3 +1,5 @@
+package Programacion.UD4.Ejemplos;
+
 import java.util.Scanner;
 
 public class Main {
@@ -6,5 +8,6 @@ public class Main {
         System.out.println("Introduce tu nombre: ");
         String nombre = scanner1.nextLine();
         System.out.println("Nombre: " + nombre);
+        scanner1.close();
     }
 }
