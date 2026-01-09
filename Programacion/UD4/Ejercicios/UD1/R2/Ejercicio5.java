@@ -4,13 +4,16 @@ import java.util.Scanner;
 
 public class Ejercicio5 {
     public static void main(String[] args) {
-        // Crear objeto Scanner
+        final double GRAVEDADLUNA = 0.165;
         Scanner scanner = new Scanner(System.in);
+        double pesoUsuario = 0;
+        double pesoLuna = 0;
 
         System.out.print("Ingrese su peso: ");
-        int peso = scanner.nextInt();
-        final double pesoLuna = (peso * 16.5) / 100;
-        System.out.println("Su peso en la luna es : " + pesoLuna);
+        pesoUsuario = scanner.nextDouble();
+        pesoLuna = pesoUsuario * GRAVEDADLUNA;
+
+        System.out.println("El usuario pesa en la tierra: " + pesoUsuario + " kgs. Su peso en la luna es : " + pesoLuna + " kgs");
         scanner.close();
     }
 }
