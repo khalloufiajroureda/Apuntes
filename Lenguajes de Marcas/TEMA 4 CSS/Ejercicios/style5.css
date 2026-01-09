@@ -1,0 +1,10 @@
+h1,h2,p{
+    font-family: 'Courier New', Courier, monospace;
+}
+h2{
+    font-size: 20px;
+}
+blockquote{
+    font-style: italic;
+    color: aqua;
+}

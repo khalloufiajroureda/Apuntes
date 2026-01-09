@@ -1,0 +1,10 @@
+h2{
+    color: blueviolet;
+}
+section{
+    background-image: url('leo.png');
+    background-size: cover;
+}
+p:hover{
+    color: blueviolet;
+}
