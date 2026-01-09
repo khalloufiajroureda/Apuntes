@@ -13,7 +13,7 @@ public class Ejercicio5 {
         pesoUsuario = scanner.nextDouble();
         pesoLuna = pesoUsuario * GRAVEDADLUNA;
 
-        System.out.println("El usuario pesa en la tierra: " + pesoUsuario + " kgs. Su peso en la luna es : " + pesoLuna + " kgs");
+        System.out.printf("El usuario pesa en la tierra: %.2f kgs. Su peso en la luna es %.2f kgs", pesoUsuario, pesoLuna);
         scanner.close();
     }
 }
