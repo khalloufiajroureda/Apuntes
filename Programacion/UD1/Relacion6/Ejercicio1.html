@@ -28,10 +28,12 @@
         }
 
         nota = Number(prompt("Introduce la calificacion del alumno " + numeroAlumno))
+        sumatorio += nota
     }
-
-    promedio = sumatorio / (numeroAlumno - 1)
-
+    
+    promedio = sumatorio / (numeroAlumno -1)
+    console.log(sumatorio)
+    
     console.log("Hay " + alumnosAprobados + " alumnos aprobados y " +
         alumnosSuspensos + " alumnos suspensos");
 
