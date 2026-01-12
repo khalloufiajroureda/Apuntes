@@ -7,8 +7,8 @@ public class Ejercicio5 {
         int numero = 0;
         final int DIEZ = 10;
         final int VEINTE = 20;
-
         Scanner scanner = new Scanner(System.in);
+        
         System.out.print("Escriba un  numero: ");
         numero = scanner.nextInt();
         scanner.close();

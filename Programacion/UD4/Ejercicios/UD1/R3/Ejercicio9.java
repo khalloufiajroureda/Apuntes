@@ -9,8 +9,8 @@ public class Ejercicio9 {
         int digitoDecenas;
         int digitoUnidades;
         int suma;
-
         Scanner scanner = new Scanner(System.in);
+        
         System.out.print("Introduzca un numero de dos digitos: ");
         numero = scanner.nextInt();
         scanner.close();

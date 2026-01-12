@@ -12,8 +12,8 @@ public class Ejercicio7 {
         char resta = '-';
         char multiplicacion = '*';
         char division = '/';
-
         Scanner scanner = new Scanner(System.in);
+        
         System.out.print("Introduzca el primer numero: ");
         numero1 = scanner.nextDouble();
         System.out.print("Introduzca el segundo numero: ");

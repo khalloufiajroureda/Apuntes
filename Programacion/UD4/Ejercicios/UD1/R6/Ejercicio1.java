@@ -5,15 +5,16 @@ import java.util.Scanner;
 public class Ejercicio1 {
     public static void main(String[] args) {
         int numeroAlumno = 1;
-        int nota = 0;
-        int sumatorio = 0;
+        double nota = 0;
+        double sumatorio = 0;
         int alumnosAprobados = 0;
         int alumnosSuspensos = 0;
-        int promedio;
-
+        double promedio;
         Scanner scanner = new Scanner(System.in);
+        
         System.out.print("Introduzca la calificacion del alumno " + numeroAlumno + ": ");
-        numeroAlumno = scanner.nextInt();
+        nota = scanner.nextDouble();
+        sumatorio += nota;
 
         while (nota != -1) {
             numeroAlumno += 1;
