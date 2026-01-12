@@ -5,17 +5,26 @@ import java.util.Scanner;
 public class PT1 {
     public static void main(String[] args) {
         int numeroPedidos = 1;
-        int stockArroz;
-        double stockAgua;
-        int maki;
-        int nigiri;
-        int sashimi;
-        int arrozMaki = 120;
-        int arrozNigiri = 50;
-        int arrozSashimi = 0;
-        double aguaMaki = 0.10;
-        double aguaNigiri = 0.05;
-        double aguaSashimi = 0.02;
+        int numeroUnidades;
+        String tipoPlato;
+        boolean stockSuperado = false;
+        int stockArroz = 0;
+        double stockAgua = 0;
+        int arrozGastadoAcumulado = 0;
+        double aguaGastadaAcumulada = 0;
+        final int ARROZMAKI = 120, ARROZNIGIRI = 50, ARROZSASHIMI = 0;
+        final double AGUAMAKI = 0.10, AGUANIGIRI = 0.05, AGUASASHIMI = 0.02;
+        final int PRECIOMAKI = 8, PRECIONIGIRI = 10, PRECIOSASHIMI = 12;
+        int arrozRestante;
+        double aguaRestante;
+        int totalPiezasMaki = 0;
+        int totalPiezasNigiri = 0;
+        int totalPiezasSashimi = 0;
+        int arrozGastadoPedido;
+        double aguaGastadoPedido;
+        int importe;
+        int contadorPedidos = 1;
+        int importeCajaTotal = 0;
         Scanner scanner = new Scanner(System.in);
 
         System.out.print("Indique el numero de pedidos que desea realizar: ");
@@ -26,9 +35,77 @@ public class PT1 {
         stockAgua = scanner.nextDouble();
 
         for (int i = 0; i < numeroPedidos; i++) {
-            System.out.println("--- Pedido " + (i + 1) +" ---");
-            System.out.println("Indique el tipo de plato (maki, nigiri, sashimi): ");
-            maki = scanner.nextInt();
+            System.out.println("--- Pedido " + (i + 1) + " ---");
+            System.out.print("Indique el tipo de plato (maki, nigiri, sashimi): ");
+            scanner.nextLine();
+            tipoPlato = scanner.nextLine();
+            
+            System.out.print("Indique el el numero de unidades que desea: ");
+            numeroUnidades = scanner.nextInt();
+            
+
+            if (tipoPlato.equals("maki")) {
+                arrozGastadoPedido = ARROZMAKI * numeroUnidades;
+                aguaGastadoPedido = AGUAMAKI * numeroUnidades;
+                importe = PRECIOMAKI * numeroUnidades;
+
+            } else if (tipoPlato.equals("nigiri")) {
+                arrozGastadoPedido = ARROZNIGIRI * numeroUnidades;
+                aguaGastadoPedido = AGUANIGIRI * numeroUnidades;
+                importe = PRECIONIGIRI * numeroUnidades;
+
+            } else {
+                arrozGastadoPedido = ARROZSASHIMI * numeroUnidades;
+                aguaGastadoPedido = AGUASASHIMI * numeroUnidades;
+                importe = PRECIOSASHIMI * numeroUnidades;
+            }
+
+            if (stockArroz < arrozGastadoAcumulado + arrozGastadoPedido) {
+                stockSuperado = true;
+                System.out.println("¡Alerta! Has superado el stock de arroz");
+            }
+            if (stockAgua < aguaGastadaAcumulada + aguaGastadoPedido) {
+                stockSuperado = true;
+                System.out.println("¡Alerta! Has superado el stock de agua");
+            }
+
+            if (!stockSuperado) {
+
+                contadorPedidos++;
+                arrozGastadoAcumulado += arrozGastadoPedido;
+                aguaGastadaAcumulada += aguaGastadoPedido;
+                importeCajaTotal += importe;
+
+                if (tipoPlato.equals("maki"))
+                    totalPiezasMaki += numeroUnidades;
+                else if (tipoPlato.equals("nigiri") )
+                    totalPiezasNigiri += numeroUnidades;
+                else
+                    totalPiezasSashimi += numeroUnidades;
+
+                System.out.println("Plato: " + tipoPlato + " | Unidades: " + numeroUnidades + " | Importe cobrado: "
+                        + importe + " Euros");
+                System.out.println("Arroz gastado en el pedido: " + arrozGastadoPedido + "g | Arroz acumulado: "
+                        + arrozGastadoAcumulado + " g");
+                System.out.println("Agua gastada en el pedido (L): " + aguaGastadoPedido + " | Agua acumulada (L): " + aguaGastadaAcumulada);
+            }
         }
+        arrozRestante = stockArroz - arrozGastadoAcumulado;
+        aguaRestante = stockAgua - aguaGastadaAcumulada;
+
+        System.out.println("=== RESUMEN FINAL ===");
+        System.out.println("Pedidos registrados: " + (contadorPedidos - 1) + " de " + numeroPedidos);
+        System.out.println("Unidades: Maki: " + totalPiezasMaki + " | Nigiri: " + totalPiezasNigiri + " | Sashimi: "
+                + totalPiezasSashimi);
+        System.out.println(
+                "Consumo total: Arroz: " + arrozGastadoAcumulado + " g | Agua: " + aguaGastadaAcumulada + " L");
+        System.out.println("Stock restante: Arroz: " + arrozRestante + " g | Agua: " + aguaRestante + " L");
+        System.out.println("Caja del día: " + importeCajaTotal + " Euros");
+        if (stockSuperado) {
+            System.out.println("Mensaje final:  Registro interrumpido por superación de stock");
+        } else {
+            System.out.println("Mensaje final: Registro completado con éxito");
+        }
+        scanner.close();
     }
 }
