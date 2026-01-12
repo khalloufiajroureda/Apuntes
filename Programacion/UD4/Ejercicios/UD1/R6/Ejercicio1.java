@@ -13,8 +13,7 @@ public class Ejercicio1 {
         Scanner scanner = new Scanner(System.in);
         
         System.out.print("Introduzca la calificacion del alumno " + numeroAlumno + ": ");
-        nota = scanner.nextDouble();
-        sumatorio += nota;
+        numeroAlumno = scanner.nextInt();
 
         while (nota != -1) {
             numeroAlumno += 1;
