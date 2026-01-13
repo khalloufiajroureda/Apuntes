@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class PT1 {
     public static void main(String[] args) {
-        int numeroPedidos = 1;
+        int numeroPedidos = 0;
         int numeroUnidades;
         String tipoPlato;
         boolean stockSuperado = false;
@@ -23,27 +23,40 @@ public class PT1 {
         int arrozGastadoPedido;
         double aguaGastadoPedido;
         int importe;
-        int contadorPedidos = 1;
+        int contadorPedidos = 0;
         int importeCajaTotal = 0;
         Scanner scanner = new Scanner(System.in);
 
         System.out.print("Indique el numero de pedidos que desea realizar: ");
         numeroPedidos = scanner.nextInt();
+        while (numeroPedidos <= 0) {
+            System.out.print("Indique el numero de pedidos que desea realizar: ");
+            numeroPedidos = scanner.nextInt();
+            try {
+                numeroPedidos = Integer.parseInt(scanner.nextLine());
+            } catch (Exception e) {
+                numeroPedidos = 0;
+                System.out.println("Error, El numero de pedidos debe de ser un numero entero");
+            }
+            if (numeroPedidos <= 0) {
+                System.out.println("Error, El numero de pedidos debe de ser mayor que 0");
+            }
+        }
         System.out.print("Indique el stock de arroz disponible: ");
         stockArroz = scanner.nextInt();
         System.out.print("Indique el stock de agua disponible: ");
         stockAgua = scanner.nextDouble();
+        scanner.nextLine();
 
-        for (int i = 0; i < numeroPedidos; i++) {
-            System.out.println("--- Pedido " + (i + 1) + " ---");
+        for (int i = 1; i <= numeroPedidos; i++) {
+            System.out.println("--- Pedido " + i + " ---");
             System.out.print("Indique el tipo de plato (maki, nigiri, sashimi): ");
-            scanner.nextLine();
             tipoPlato = scanner.nextLine();
             
             System.out.print("Indique el el numero de unidades que desea: ");
             numeroUnidades = scanner.nextInt();
+            scanner.nextLine();
             
-
             if (tipoPlato.equals("maki")) {
                 arrozGastadoPedido = ARROZMAKI * numeroUnidades;
                 aguaGastadoPedido = AGUAMAKI * numeroUnidades;
@@ -60,11 +73,11 @@ public class PT1 {
                 importe = PRECIOSASHIMI * numeroUnidades;
             }
 
-            if (stockArroz < arrozGastadoAcumulado + arrozGastadoPedido) {
+            if (stockArroz < (arrozGastadoAcumulado + arrozGastadoPedido)) {
                 stockSuperado = true;
                 System.out.println("¡Alerta! Has superado el stock de arroz");
             }
-            if (stockAgua < aguaGastadaAcumulada + aguaGastadoPedido) {
+            if (stockAgua < (aguaGastadaAcumulada + aguaGastadoPedido)) {
                 stockSuperado = true;
                 System.out.println("¡Alerta! Has superado el stock de agua");
             }
@@ -94,11 +107,10 @@ public class PT1 {
         aguaRestante = stockAgua - aguaGastadaAcumulada;
 
         System.out.println("=== RESUMEN FINAL ===");
-        System.out.println("Pedidos registrados: " + (contadorPedidos - 1) + " de " + numeroPedidos);
+        System.out.println("Pedidos registrados: " + contadorPedidos  + " de " + numeroPedidos);
         System.out.println("Unidades: Maki: " + totalPiezasMaki + " | Nigiri: " + totalPiezasNigiri + " | Sashimi: "
                 + totalPiezasSashimi);
-        System.out.println(
-                "Consumo total: Arroz: " + arrozGastadoAcumulado + " g | Agua: " + aguaGastadaAcumulada + " L");
+        System.out.println("Consumo total: Arroz: " + arrozGastadoAcumulado + " g | Agua: " + aguaGastadaAcumulada + " L");
         System.out.println("Stock restante: Arroz: " + arrozRestante + " g | Agua: " + aguaRestante + " L");
         System.out.println("Caja del día: " + importeCajaTotal + " Euros");
         if (stockSuperado) {
