@@ -128,7 +128,7 @@ SELECT fecha from partidos WHERE fecha >= "2023-01-01" and fecha <= "2023-01-31"
 SELECT COUNT(id_jugador) AS contar_jugadores FROM jugadores WHERE id_equipo = 1
 
 -- 11. Ordenar equipos por ciudad alfabéticamente y despues por año de fundacion descendente.
-
+SELECT ciudad, fundado FROM equipos order by ciudad, fundado DESC;
 
 -- 12. Calcular la edad promedio de los jugadores y asignarle un alias, ordenado por ID de equipo y edad promedio de forma descendente.
 
