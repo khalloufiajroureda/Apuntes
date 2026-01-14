@@ -1,5 +1,5 @@
 /**
- * 
+ * La funcion compara numeros y saca el mas grande.
  * @param {number} numero1 - Primer numero
  * @param {number} numero2 - Segundo numero
  * @param {number} numero3 - Tercer numero
