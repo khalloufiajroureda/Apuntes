@@ -1,4 +1,4 @@
-package Programacion.UD4.Ejemplos;
+package Ejemplos;
 
 import java.util.Scanner;
 

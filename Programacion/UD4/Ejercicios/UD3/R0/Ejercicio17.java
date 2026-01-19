@@ -1,4 +1,4 @@
-package Programacion.UD4.Ejercicios.UD3.R0;
+package Ejercicios.UD3.R0;
 
 public class Ejercicio17 {
     
