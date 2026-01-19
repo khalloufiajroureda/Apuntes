@@ -67,6 +67,6 @@ SELECT nombre_equipo, ciudad AS nombre_ciudad from equipos;
 -- 2. Muestra los nombres de los jugadores y puntos por juego, ordenados de mayor a menor.
 SELECT nombre, puntos_por_juego FROM jugadores order by nombre DESC, puntos_por_juego DESC;
 -- 3. Recupera los nombres de los equipos y la longitud de sus nombres, ordenados por esta longitud de mayor a menor.
-
+SELECT nombre, char_legth(nombre) as longitud FROM equipos order by longitud DESC;
 -- 4. Muestra los nombres de las ciudades y la suma total de campeonatos ganados por equipos en cada ciudad, ordenados por la suma de mayor a menor.
-
+SELECT ciudad, sum(campeonatos) FROM equipos group by ciudad order by sum(campeonatos) DESC, ciudad;
