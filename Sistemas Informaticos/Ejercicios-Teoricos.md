@@ -39,3 +39,5 @@ a. Correo postal ordinario b. Correo certificado c. Envío y recepción de fax d
 ### Ejercicio extra:
 
 **7.** ¿Cuál es el tiempo necesario en enviar un paquete de 1000 Bytes, incluidos 50 Bytes de cabecera, por un enlace de 100 Mbps y 10Km? ¿cuál es el tiempo mínimo desde que se envía hasta que se recibe confirmación? ¿qué relación hay entre este tiempo y los temporizadores en, por ejemplo, las capas de enlace y transporte?
+
+![EJercicio Resuelto](/Sistemas%20Informaticos/ejercicio.jpg)
