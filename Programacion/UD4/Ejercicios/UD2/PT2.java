@@ -22,9 +22,7 @@ public class PT2 {
 
         
         ArrayList <Integer> tableroInterno = new ArrayList<Integer>();
-        new ArrayList<Integer>();
         ArrayList <String> tableroVisible = new ArrayList<String>();
-        new ArrayList<String>();
 
         for (int i = 0; i < NUMDIENTES; i++) {
             tableroInterno.add(0);
