@@ -73,18 +73,18 @@ INSERT INTO venta VALUES
 -- Relación de ejercicios prácticos
 
 -- 1. Encuentra el número total de empleados por departamento.
-SELECT COUNT(id) FROM empleado;
+SELECT COUNT(id) FROM empleado group by departamento;
 -- 2. Calcula el salario promedio por ciudad, mostrando solo las ciudades con un salario promedio mayor a 4000.
 SELECT AVG(salario) AS salario_promedio, ciudad FROM empleado group by ciudad having salario_promedio > 4000;
 -- 3. Encuentra el total de ventas por cada cliente.
-SELECT cliente, sum(importe) AS total_ventas from venta group by cliente;
+SELECT cliente, COUNT(*) AS total_ventas from venta group by cliente;
 -- 4. Muestra los departamentos con más de 3 empleados.
 SELECT departamento from empleado group by departamento having count(departamento) > 2;
 -- 5. Calcula el promedio de edad de los empleados por ciudad.
 SELECT avg(edad) as promedio_edad, ciudad from empleado group by ciudad;
 -- 6. Muestra las ciudades en las que hay empleados, sin duplicados.
-
--- 7. Muestra el número total de ventas y la suma total de importes.
+select ciudad from empleado group by ciudad;
+-- 7. Muestra el número total de ventas y la suma total de imp
 
 
 -- 8. Encuentra el/los cliente/clientes con la venta más baja.
