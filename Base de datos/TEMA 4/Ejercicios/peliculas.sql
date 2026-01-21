@@ -121,13 +121,11 @@ SELECT AVG(duracion) AS duracion_promedio FROM pelicula;
 -- 15. Mostrar los actores que no nacieron en EE.UU.
 SELECT nombre, pais_origen from actor WHERE NOT pais_origen = "EE.UU.";
 -- 17. Mostrar el id de las películas que tienen más de un actor en su reparto.
-
-
+SELECT id_pelicula FROM reparto GROUP by id_pelicula having count(id_actor) > 1;
 -- 18. Calcular el número total de actores en la base de datos.
-
-
+SELECT COUNT(*) AS total_actores from actor;
 -- 19. Mostrar las películas que no tienen actores en el reparto.
-
+SELECT id_pelicula FROM reparto where not id_actor;
 -- 20. Seleccionar las películas estrenadas en los últimos 10 años.
 
 
