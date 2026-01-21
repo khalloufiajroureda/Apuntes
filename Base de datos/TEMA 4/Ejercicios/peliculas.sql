@@ -1,5 +1,5 @@
 -- Ejercicios de MySQL - Base de Datos de Películas (Extendida)
-drop database cine_db;
+drop database if exists cine_db;
 CREATE DATABASE if not exists cine_db;
 USE cine_db;
 
@@ -92,45 +92,34 @@ INSERT INTO reparto (id_pelicula, id_actor) VALUES
 
 -- Ejercicios (Ampliados)
 -- 1. Listar todos los títulos de las películas.
-
+SELECT titulo FROM pelicula;
 -- 2. Mostrar los géneros de las películas sin repetir.
-
-
+SELECT genero FROM pelicula GROUP BY genero;
 -- 3. Seleccionar el título y año de todas las películas estrenadas después del año 2000.
-
-
+SELECT titulo, anio FROM pelicula WHERE anio > 2000;
 -- 4. Listar los nombres de todos los directores y sus países de origen.
-
-
+SELECT nombre, pais_origen FROM director;
 -- 5. Mostrar los títulos de las películas con duración mayor a 150 minutos.
-
+SELECT titulo, duracion FROM pelicula WHERE duracion > 150;
 -- 6. Seleccionar el título de las películas del género 'Drama'.
-
-
+SELECT titulo FROM pelicula WHERE genero = "Drama";
 -- 7. Mostrar los id de los actores que participan en la película 'Titanic'.
 -- Enunciado: Mostrar los id de los actores asociados con el id de 'Titanic'.
-
-
-
+SELECT id_actor FROM reparto where id_pelicula = (SELECT id from pelicula where titulo = "Titanic");
 -- 8. Contar cuántas películas hay en cada género.
-
+SELECT genero, COUNT(titulo) as peliculas from pelicula group by genero;
 -- 9. Mostrar los directores nacidos después de 1950.
-
-
+SELECT nombre, anio_nacimiento FROM director WHERE anio_nacimiento > 1950;
 -- 10. Listar los títulos de las películas y su duración ordenados de mayor a menor.
-
-
+SELECT titulo, duracion FROM pelicula order by duracion DESC;
 -- 12. Seleccionar las películas cuya duración está entre 120 y 180 minutos.
-
-
+SELECT titulo, duracion FROM pelicula WHERE duracion BETWEEN '120' and '180';
 -- 13. Mostrar los títulos de las películas ordenados por año de estreno.
-
-
+SELECT titulo, anio FROM pelicula order by anio ASC;
 -- 14. Calcular el promedio de duración de las películas.
-
+SELECT AVG(duracion) AS duracion_promedio FROM pelicula;
 -- 15. Mostrar los actores que no nacieron en EE.UU.
-
-
+SELECT nombre, pais_origen from actor WHERE NOT pais_origen = "EE.UU.";
 -- 17. Mostrar el id de las películas que tienen más de un actor en su reparto.
 
 
