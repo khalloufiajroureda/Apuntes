@@ -1,7 +1,11 @@
 package Ejercicios.UD3.R0;
 
 public class Ejercicio17 {
-    
+    /**
+     * 
+     * @param cadenaTexto
+     * @return
+     */
     public static String revertirCadena(String cadenaTexto){
         int cadena = cadenaTexto.length();
         String cadenaInvertida = "";
