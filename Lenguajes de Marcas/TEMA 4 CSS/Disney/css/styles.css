@@ -1,0 +1,50 @@
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+body{
+background-color: white;
+}
+
+h1{
+    font-family: 'Times New Roman', Times, serif
+}
+
+p{
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    background-color: aqua;
+    padding: 1%;
+}
+
+.menu{
+    display: flex;
+    justify-content: flex end;
+    gap: 20px;
+    list-style: none; 
+    color: white;
+}
+
+.menu a:hover{
+    color: black;
+}
+.imagenPrincipal{
+    display: flex ;
+    justify-content: center;
+    flex-direction: column;
+    background-image: url(img/imgPrincipal.jpg);
+    background-size: cover;
+    background-position: center;
+    padding: 5%;
+}
+.imagen1{
+    background-image: url();
+    background-size: cover;
+    background-position: center;
+}
