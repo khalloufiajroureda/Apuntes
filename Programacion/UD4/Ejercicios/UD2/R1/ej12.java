@@ -8,8 +8,8 @@ public class ej12 {
         ArrayList<String> letras = new ArrayList<>(Arrays.asList("a", "b", "c", "d"));
         ArrayList<String> invertido = new ArrayList<String>();
         
-        for (int i = 0; i < letras.size(); i++) {
-            invertido.add(letras.remove(letras.size()-1));
+        for (String letra : letras) {
+            invertido.addFirst(letra);
         }
         System.out.println(String.join(", ", invertido));
     }
