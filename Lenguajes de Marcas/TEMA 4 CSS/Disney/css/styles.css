@@ -37,7 +37,6 @@ p{
 .imagenPrincipal{
     display: flex ;
     justify-content: center;
-    flex-direction: column;
     background-image: url(img/imgPrincipal.jpg);
     background-size: cover;
     background-position: center;
@@ -48,3 +47,30 @@ p{
     background-size: cover;
     background-position: center;
 }
+
+.pelisDestacadas{
+    display: flex;
+    justify-content: space-between;
+}
+
+.personajPopulares{
+    display: flex;
+    justify-content: space-between;
+}
+
+.personaje1{
+    background-color: rgb(236, 185, 108);
+}
+
+.personaje2{
+    background-color: rgba(204, 204, 82, 0.795);
+}
+
+.personaje3{
+    background-color: rgb(120, 214, 143);
+}
+
+.personaje4{
+    background-color: rgb(155, 230, 243);
+}
+
