@@ -30,6 +30,9 @@ p{
     list-style: none; 
     color: white;
 }
+.menu a{
+    text-decoration: none;
+}
 
 .menu a:hover{
     color: black;
