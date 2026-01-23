@@ -39,12 +39,21 @@ p{
 }
 .imagenPrincipal{
     display: flex ;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
     background-image: url(img/imgPrincipal.jpg);
     background-size: cover;
     background-position: center;
     padding: 5%;
+    color: white;
 }
+
+.imagenPrincipal button{
+    background-color: rgba(92, 157, 243, 0.897);
+    color: white;
+    padding: 0.5%;
+}
+
 .imagen1{
     background-image: url();
     background-size: cover;
@@ -76,4 +85,5 @@ p{
 .personaje4{
     background-color: rgb(155, 230, 243);
 }
+
 
