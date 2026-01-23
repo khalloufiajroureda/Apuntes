@@ -5,7 +5,8 @@
 }
 
 body{
-background-color: white;
+background: linear-gradient(to bottom, rgb(115, 115, 219), rgb(238, 105, 105),rgb(115, 115, 219));
+
 }
 
 h1{
@@ -23,19 +24,23 @@ p{
     padding: 1%;
 }
 
+.header a.active{
+    font-weight: bold;
+}
+
 .menu{
     display: flex;
     justify-content: flex end;
     gap: 20px;
     list-style: none; 
-    color: white;
+    color: rgb(253, 253, 253);
 }
 .menu a{
     text-decoration: none;
 }
 
 .menu a:hover{
-    color: black;
+    color: rgb(255, 0, 0);
 }
 .imagenPrincipal{
     display: flex ;
@@ -44,14 +49,19 @@ p{
     background-image: url(img/imgPrincipal.jpg);
     background-size: cover;
     background-position: center;
-    padding: 5%;
+    padding: 60px 20px;
     color: white;
 }
 
-.imagenPrincipal button{
+.button{
     background-color: rgba(92, 157, 243, 0.897);
+    padding: 10px 20px;
     color: white;
-    padding: 0.5%;
+    border: none;
+    cursor: pointer;
+}
+.button:hover{
+    transform: scale(1.1);
 }
 
 .imagen1{
@@ -63,27 +73,112 @@ p{
 .pelisDestacadas{
     display: flex;
     justify-content: space-between;
+    margin: 2%;
+}
+.pelisDestacadas img{
+    border-radius: 10%;
+}
+.peli1{
+    background-color: white;
+    border: 2px solid black;
+    display: flex ;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 20px;
+}
+.peli2{
+    background-color: white;
+    border: 2px solid black;
+    display: flex ;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 20px;
+}
+.peli3{
+    background-color: white;
+    border: 2px solid black;
+    display: flex ;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 20px;
 }
 
 .personajPopulares{
     display: flex;
     justify-content: space-between;
+    margin: 0.5%;
 }
 
 .personaje1{
     background-color: rgb(236, 185, 108);
+    border: 2px solid black;
+    display: flex ;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 20px;
 }
 
 .personaje2{
     background-color: rgba(204, 204, 82, 0.795);
+    border: 2px solid black;
+    display: flex ;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 20px;
 }
 
 .personaje3{
     background-color: rgb(120, 214, 143);
+    border: 2px solid black;
+    display: flex ;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 20px;
 }
 
 .personaje4{
     background-color: rgb(155, 230, 243);
+    border: 2px solid black;
+    display: flex ;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.personajPopulares img + h3:hover{
+    border: 2px black;
+}
+
+.evento1y2{
+    background-color: rgb(172, 224, 231);
+    list-style: none; 
+    margin: 0.5%;
+    padding: 0.5%;
+    border: 2px solid rgb(0, 153, 255);
+}
+.evento3{
+    background-color: rgb(247, 205, 212);
+    list-style: none; 
+    margin: 0.5%;
+    padding: 0.5%;
+    border: 2px solid rgb(235, 74, 101);
+}
+
+.footer{
+    background-color: aqua;
+    display: flex;
+    justify-content: space-between;
+    padding: 1%;
+}
+.redes{
+    display: flex;
+    justify-content: flex end;
+    gap: 10px;
+    list-style: none; 
+    color: rgb(253, 253, 253);
+}
+.redes a{
+    text-decoration: none;
 }
 
 
