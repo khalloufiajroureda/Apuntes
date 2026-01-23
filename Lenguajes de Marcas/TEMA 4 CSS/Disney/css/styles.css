@@ -5,7 +5,7 @@
 }
 
 body{
-background: linear-gradient(to bottom, rgb(115, 115, 219), rgb(238, 105, 105),rgb(115, 115, 219));
+background: rgb(255, 245, 245);
 
 }
 
@@ -20,8 +20,12 @@ p{
 .header{
     display: flex;
     justify-content: space-between;
-    background-color: aqua;
+    background-color: rgb(0, 132, 255);
+    color: white;
     padding: 1%;
+}
+.header a:hover{
+    text-decoration: underline;
 }
 
 .header a.active{
@@ -165,9 +169,11 @@ p{
 }
 
 .footer{
-    background-color: aqua;
+    background-color: rgb(0, 132, 255);
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    color: white;
     padding: 1%;
 }
 .redes{
@@ -179,6 +185,11 @@ p{
 }
 .redes a{
     text-decoration: none;
+}
+
+.redes a:hover{
+    color: red;
+    text-decoration: underline;
 }
 
 
