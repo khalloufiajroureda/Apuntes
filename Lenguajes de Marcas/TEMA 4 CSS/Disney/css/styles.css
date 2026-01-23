@@ -146,7 +146,7 @@ p{
 }
 
 .personajPopulares img + h3:hover{
-    border: 2px black;
+    color:rgb(230, 13, 13);
 }
 
 .evento1y2{
