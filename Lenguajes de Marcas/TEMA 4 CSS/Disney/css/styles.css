@@ -76,7 +76,7 @@ p{
 
 .pelisDestacadas{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     margin: 2%;
 }
 .pelisDestacadas img{
@@ -109,7 +109,7 @@ p{
 
 .personajPopulares{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     margin: 0.5%;
 }
 
