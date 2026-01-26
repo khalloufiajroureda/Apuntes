@@ -24,6 +24,9 @@ p{
     color: white;
     padding: 1%;
 }
+.header:hover{
+    color: red;
+}
 .header a:hover{
     text-decoration: underline;
 }
