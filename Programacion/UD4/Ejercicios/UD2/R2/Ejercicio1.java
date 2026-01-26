@@ -16,14 +16,13 @@ public class Ejercicio1 {
             temperaturas.add(temperaturaSolicitada);
         }
 
-        while (!opcion.equals("4")) {
-            
-            System.out.println("1. Mostrar la temperatura más alta registrada.\n" +
-                    "2. Mostrar la temperatura más baja registrada.\n" +
-                    "3. Calcular la temperatura promedio de la semana.\n" +
-                    "4. Salir del programa.");
+        do {
+            System.out.println("1. Mostrar la temperatura más alta registrada.");
+            System.out.println("2. Mostrar la temperatura más baja registrada.");
+            System.out.println("3. Calcular la temperatura promedio de la semana.");
+            System.out.println("Salir del programa");
             opcion = scanner.nextLine();
-
+        
             if (opcion.equals("1")) {
                 int temperaturaMaxima = temperaturas.get(0);
 
@@ -54,8 +53,9 @@ public class Ejercicio1 {
                 int temperaturaMedia = sumatorioTemperaturas / temperaturas.size();
 
                 System.out.println("La temperatura media es de " + temperaturaMedia + " ºC");
-                scanner.close();
             }
-        }
+
+        } while (!opcion.equals("4"));
+        scanner.close();
     }
 }
