@@ -75,7 +75,7 @@ public class Ejercicio6 {
                 }
             }
 
-        } while (opcion != 5);
+        } while (opcion == 5);
         System.out.println("Programa finalizado");
         scanner.close();
     }
