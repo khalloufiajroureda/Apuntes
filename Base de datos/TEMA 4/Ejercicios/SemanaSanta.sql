@@ -116,37 +116,27 @@ select nombre, antiguedad from hermandad order by antiguedad DESC;
 -- 18. Seleccionar los pasos ordenados por peso y, en caso de empate, por estilo alfabético.
 select * from paso order by peso;
 -- 20. Mostrar los puntos de paso de las procesiones ordenados por hora de paso en orden descendente.
-
+select barrio , hora_inicio from procesion order by hora_inicio DESC;
 -- 21. Contar cuántas procesiones hay en total.
-
-
+select COUNT(nombre) AS total_procesiones from procesion;
 -- 22. Obtener el peso promedio de todos los pasos.
-
-
+select AVG(peso) AS peso_promedio from paso;
 -- 23. Calcular el número máximo de costaleros en una hermandad.
-
-
+select MAX(numero_costaleros) AS maximo_costaleros from hermandad;
 -- 24. Obtener el número de procesiones que se realizan en el barrio 'Albaicín'.
-
-
+select COUNT(nombre) AS procesiones_albaicín from procesion where barrio = "Albaicín";
 -- 25. Sumar el peso de todos los pasos.
-
-
+select SUM(peso) AS suma_pesos from paso;
 -- 26. Agrupar las procesiones por barrio y contar cuántas procesiones hay en cada uno.
-
-
+select barrio , COUNT(nombre) as procesiones_totales from procesion group by barrio;
 -- 27. Calcular el peso total de los pasos agrupados por estilo.
-
-
+select estilo , SUM(peso) as suma_pesos from paso group by estilo;
 -- 28. Mostrar las hermandades agrupadas por número de costaleros, filtrando aquellas con más de 100 costaleros.
-
-
+select nombre, numero_costaleros from hermandad group by numero_costaleros;
 -- 29. Obtener el número de procesiones que tienen puntos de paso después de las 20:00.
-
-
+select count(*) from (select distinct (id_procesion) AS procesion_20 from itinerario where hora_paso > "20:00:00") pepe;
 -- 30. Agrupar las hermandades por antigüedad y contar cuántas hay en cada antiguedad.
-
-
+select COUNT(nombre) as cantidad, antiguedad from hermandad group by antiguedad;
 -- 31. Concatenar el nombre y barrio de cada procesión en un único campo, separados por un guion.
 
 -- 32. Mostrar las procesiones cuyos nombres contienen más de 10 caracteres.
