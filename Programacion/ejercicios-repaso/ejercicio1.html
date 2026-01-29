@@ -1,0 +1,76 @@
+<script>
+    function pedirNotasEstudiantes(pedirNota, arrayNotas) { 
+        const NOTAMAXIMA = 10
+        for (let i = 1; i <= NOTAMAXIMA; i++) {
+            pedirNota = Number(prompt("Introduzca la nota del estdiante " + i + " :" ))
+            arrayNotas.push(pedirNota)
+        }
+        return pedirNota
+    }
+    function calcularPromedio(arrayNotas) {
+        let suma = 0;
+        for (let i = 0; i < arrayNotas.length; i++) {
+            suma += arrayNotas[i];
+        }
+        return suma / arrayNotas.length
+    }
+
+    function obtenerNotaMayor(arrayNotas) {
+        let notaAlta = 0
+        for (let i = 0; i < arrayNotas.length; i++) {
+            if (arrayNotas[i] > notaAlta) {
+                notaAlta = arrayNotas[i]
+            }
+        }
+        return notaAlta
+    }
+
+    function obtenerNotaMenor(arrayNotas) {
+        let notaBaja = 10
+        for (let i = 0; i < arrayNotas.length; i++) {
+            if (arrayNotas[i] < notaBaja) {
+                notaBaja = arrayNotas[i]
+            }
+        }
+        return notaBaja
+    }
+
+    let notaEstudiante = ""
+    let arrayNotasEstudiantes = []
+    let menu;
+
+    pedirNotasEstudiantes(notaEstudiante, arrayNotasEstudiantes)
+    
+    menu = Number(prompt("Seleccione una de las siguentes opciones: " +
+        "\n1-Promedio de las notas" +
+        "\n2-Nota mas alta" +
+        "\n3-Nota mas baja" +
+        "\n4-Salir del programa"
+    ));
+
+    while (menu != 4) {
+
+        if (menu == 1) {
+            console.log("La Nota promedio es de: " + calcularPromedio(arrayNotasEstudiantes));
+        }
+        if (menu == 2) {
+            console.log("La Nota mas alta es : " + obtenerNotaMayor(arrayNotasEstudiantes));
+        }
+        if (menu == 3) {
+            console.log("La Nota mas baja es : " + obtenerNotaMenor(arrayNotasEstudiantes));
+        }
+
+        menu = Number(prompt("Seleccione una de las siguentes opciones: " +
+        "\n1-Promedio de las notas" +
+        "\n2-Nota mas alta" +
+        "\n3-Nota mas baja" +
+        "\n4-Salir del programa"
+    ));
+    }
+    console.log("Programa Finalizado...");
+    
+    
+
+
+
+</script>
