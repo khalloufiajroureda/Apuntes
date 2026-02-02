@@ -5,7 +5,7 @@
 }
 
 #body{
-    background-color: rgb(77, 74, 74);
+    background-color: rgb(255, 255, 255);
 }
 
 .titulos{
@@ -17,20 +17,23 @@
 }
 
 .header{
-    background-color: white;
+    background-color: black;
     display: flex;
     justify-content: space-between;
-    color: black;
+    color: white;
     padding: 1%;
 }
 .header a:active{
     font-weight: bold;
 }
 .header a{
-    color: black;
+    color: white;
     text-decoration: none;
 }
-header a:hover{
+.header :hover{
+    color: red;
+}
+.header a:hover{
     text-decoration: underline;
     color: red;
 }
@@ -46,11 +49,51 @@ header a:hover{
     align-items: center;
     flex-direction: column;
     align-items: center;
-    font-size: 30px;
+    font-size: 20px;
     color: rgb(255, 255, 255);
-    padding: 3%;
-    background-image: url(img/pirateria.png);
+    padding: 9%;
+    background-image: url(img/1.png);
     background-size: cover;
     background-position: center;
+    background-color: black;
 }
+.button{
+    background-color: rgba(255, 255, 255, 0.897);
+    padding: 5px 10px;
+    color: rgb(0, 0, 0);
+    border-radius: 10px;
+    cursor: pointer;
+}
+.button:hover{
+    transform: scale(1.1);
+}
+.tarjetas{
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+    padding: 1%;
+}
+#tipoTarjeta{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    border-style: solid;
+    border-width: 2px;
+    border-color: white;
+    padding: 1%;
+    background-color: grey;
+}
+#tipoTarjeta:hover{
+    background-color: red;
+}
+#tipoTarjeta img{
+    border-radius: 20%;
+}
+
+
+
+
 
