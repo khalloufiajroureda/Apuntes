@@ -4,15 +4,14 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Scanner;
 
-
 public class TractoMatch {
     public static void mostrarMenu() {
         System.out.println("\nElige una opcion: " +
-        "\n1: Añadir tractor" +
-        "\n2: Listar tractores" +
-        "\n3: Evaluar tractor" +
-        "\n4: Eliminar tractor" +
-        "\n0: Salir");
+                "\n1: Añadir tractor" +
+                "\n2: Listar tractores" +
+                "\n3: Evaluar tractor" +
+                "\n4: Eliminar tractor" +
+                "\n0: Salir");
     }
 
     public static void imprimirMensaje(String mensajeAMostrar) {
@@ -51,27 +50,51 @@ public class TractoMatch {
         return numero;
     }
 
-
-
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        ArrayList<String> Marca = new ArrayList<String>();
-        ArrayList<Integer> PotenciaEnCv = new ArrayList<Integer>();
+        ArrayList<String> Marca = new ArrayList<>(Arrays.asList("Golf", "Mercedes", "Audi"));
+        ArrayList<Integer> PotenciaEnCv = new ArrayList<>(Arrays.asList(100, 200, 300));
         ArrayList<String> Trabajo = new ArrayList<>(Arrays.asList("arado", "transporte", "siembra"));
         int opcion;
         boolean finPrograma = false;
-        final int OPCIONMAX = 4; final int OPCIONMIN = 0; final int UNO = 1; final int DOS = 2; final int TRES = 3; final int CUATRO = 4;
-        
-        
+        final int OPCIONMAX = 4;
+        final int OPCIONMIN = 0;
+        final int CERO = 0;
+        final int UNO = 1;
+        final int DOS = 2;
+        final int TRES = 3;
+        final int CUATRO = 4;
+        String marcaTractor;
+        int potenciaTractor;
+        String trabajoTractor;
+
         while (!finPrograma) {
             mostrarMenu();
             opcion = leerOpcionMenu(OPCIONMIN, OPCIONMAX, scanner);
 
             if (opcion == UNO) {
-                
+                System.out.println("Introduzca la marca de su tractor: ");
+                marcaTractor = scanner.nextLine();
+                Marca.add(marcaTractor);
+
+                System.out.println("Introduzca la potencia(CV) de su tractor: ");
+                potenciaTractor = scanner.nextInt();
+                if (potenciaTractor > CERO) {
+                    PotenciaEnCv.add(potenciaTractor);
+                }
+                System.out.println("Introduzca el tipo de trabajo de su tractor: ");
+                trabajoTractor = scanner.nextLine();
+                if (trabajoTractor.equals("arado") || trabajoTractor.equals("transporte")
+                        || trabajoTractor.equals("siembra")) {
+                    Trabajo.add(trabajoTractor);
+                }
+            }
+            if (opcion == DOS) {
+                for (int i = 0; i < Marca.size(); i++) {
+                    System.out.println((i + 1) + " -> " + Marca.get(i) + " | " + PotenciaEnCv.get(i) + " CV | trabajo: "
+                            + Trabajo.get(i) + ".");
+                }
             }
         }
     }
 }
-
-
