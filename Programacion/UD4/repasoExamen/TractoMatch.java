@@ -52,9 +52,9 @@ public class TractoMatch {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        ArrayList<String> Marca = new ArrayList<>(Arrays.asList("Golf", "Mercedes", "Audi"));
-        ArrayList<Integer> PotenciaEnCv = new ArrayList<>(Arrays.asList(100, 200, 300));
-        ArrayList<String> Trabajo = new ArrayList<>(Arrays.asList("arado", "transporte", "siembra"));
+        ArrayList<String> Marca = new ArrayList<String>();
+        ArrayList<Integer> PotenciaEnCv = new ArrayList<Integer>();
+        ArrayList<String> Trabajo = new ArrayList<String>();
         int opcion;
         boolean finPrograma = false;
         final int OPCIONMAX = 4;
@@ -98,6 +98,9 @@ public class TractoMatch {
                     System.out.println((i + 1) + " -> " + Marca.get(i) + " | " + PotenciaEnCv.get(i) + " CV | trabajo: "
                             + Trabajo.get(i) + ".");
                 }
+            }
+            if (opcion == TRES) {
+                
             }
             mostrarMenu();
             opcion = leerOpcionMenu(OPCIONMIN, OPCIONMAX, scanner);

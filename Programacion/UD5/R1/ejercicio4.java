@@ -17,7 +17,7 @@ class Auto {
     String marca;
     String modelo;
     int velocidadActual;
-    int velocidadFrenada;
+    
 
     Auto(String marca, String modelo, int velocidadActual) {
         this.marca = marca;
@@ -33,6 +33,7 @@ class Auto {
     }
 
     int frenar() {
+        int velocidadFrenada;
         System.out.println("Introduzca la cantidad que desea frenar: ");
         velocidadFrenada = scanner.nextInt();
 
