@@ -68,26 +68,30 @@ public class TractoMatch {
         int potenciaTractor;
         String trabajoTractor;
 
-        while (!finPrograma) {
-            mostrarMenu();
-            opcion = leerOpcionMenu(OPCIONMIN, OPCIONMAX, scanner);
+        mostrarMenu();
+        opcion = leerOpcionMenu(OPCIONMIN, OPCIONMAX, scanner);
 
+        while (!finPrograma) {
+            
             if (opcion == UNO) {
                 System.out.println("Introduzca la marca de su tractor: ");
                 marcaTractor = scanner.nextLine();
                 Marca.add(marcaTractor);
 
-                System.out.println("Introduzca la potencia(CV) de su tractor: ");
-                potenciaTractor = scanner.nextInt();
-                if (potenciaTractor > CERO) {
+                potenciaTractor = leerInt("Introduzca la potencia de su tractor: ", scanner);
+                
+                if (potenciaTractor <= CERO) {
+                    System.out.println("No se puede introducir un valor negativo");
+                } else {
                     PotenciaEnCv.add(potenciaTractor);
                 }
                 System.out.println("Introduzca el tipo de trabajo de su tractor: ");
-                trabajoTractor = scanner.nextLine();
-                if (trabajoTractor.equals("arado") || trabajoTractor.equals("transporte")
-                        || trabajoTractor.equals("siembra")) {
-                    Trabajo.add(trabajoTractor);
+                    trabajoTractor = scanner.nextLine();
+                    if (trabajoTractor.equals("arado") || trabajoTractor.equals("transporte")
+                            || trabajoTractor.equals("siembra")) {
+                        Trabajo.add(trabajoTractor);
                 }
+
             }
             if (opcion == DOS) {
                 for (int i = 0; i < Marca.size(); i++) {
@@ -95,6 +99,8 @@ public class TractoMatch {
                             + Trabajo.get(i) + ".");
                 }
             }
+            mostrarMenu();
+            opcion = leerOpcionMenu(OPCIONMIN, OPCIONMAX, scanner);
         }
     }
 }

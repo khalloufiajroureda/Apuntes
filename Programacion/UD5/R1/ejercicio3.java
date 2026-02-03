@@ -21,7 +21,7 @@ class alumno {
     String nombre;
     String materia;
     int calificacion;
-    boolean nota;
+    
 
 
     alumno(String nombre, String materia, int calificacion) {
@@ -31,6 +31,7 @@ class alumno {
     }
 
     boolean aprobo() {
+        boolean nota = false;
         if (calificacion >= 6) {
             nota = true;
         } else {
