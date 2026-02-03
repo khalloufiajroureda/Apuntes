@@ -40,13 +40,13 @@ select avg(extract(year from now()) - extract(year from fecha_nacimiento)) AS ed
 -- 4  Dime las 3 primeras letras del estado civil de las personas de Dos Hermanas (pueblo, no que tengan hermanas).
 
 -- 5  Cuenta el numero de personas que son padre siendo mujer o madre siendo hombre
-
+select count(padre) from personas where sexo = "M";
 -- 6  Dime la moda del estado civil
 SELECT estado_civil, COUNT(*) AS moda FROM personas GROUP BY estado_civil HAVING COUNT(*) = (SELECT MAX(moda) FROM (SELECT COUNT(*) AS moda FROM personas GROUP BY estado_civil) AS sub);
 -- 7  Dime cuantos municipios diferentes de la provincia de Cádiz aparecen en la base de datos. 
 
 -- 8  Dime la media de ingresos_anuales agrupada por estado_civil.
-
+select avg(ingresos_anuales) as media_ingresos_anuales, estado_civil from personas group by estado_civil;
 -- 9  Dime los abuelos de la persona con id 1144
 
 -- 10 Dime los nietos de la persona con id 1093
@@ -66,7 +66,7 @@ SELECT estado_civil, COUNT(*) AS moda FROM personas GROUP BY estado_civil HAVING
 -- 17 Dime la edad media de las personas que sean hermanas (de padre o de madre) de las personas de Málaga municipio.
 
 -- 18 Dime la media de salarios anuales agrupados por el dia del mes en el que nacieron.
-
+select avg(ingresos_anuales) as media_salarios_anuales from personas group by extract(day from fecha_nacimiento);
 -- 19 Muestra la fecha de nacimiento en dia, mes y año de los jubilados que viven en Córdoba.
 
 -- 20 Muestra la cantidad de personas que nacieron en cada década del siglo XX.
