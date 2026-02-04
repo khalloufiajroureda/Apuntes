@@ -50,13 +50,38 @@ public class TractoMatch {
         return numero;
     }
 
+    public static boolean aniadirSinDuplicados(String posibleDuplicado, ArrayList<String> array) {
+        boolean duplicadosEncontrado = false;
+
+        for (int i = 0; i < array.size() && !duplicadosEncontrado; i++) {
+            if (array.get(i).equalsIgnoreCase(posibleDuplicado)) {
+                duplicadosEncontrado = true;
+            }
+        }
+        if (!duplicadosEncontrado) {
+            array.add(posibleDuplicado);
+        } else {
+            imprimirMensaje("No se añade " + posibleDuplicado + " ya que está en el array");
+        }
+        return duplicadosEncontrado;
+    }
+    
+    public static String leerStringArray(String mensajeString, ArrayList<String> array, Scanner sc) {
+        String stringUsuario;
+        do {
+            imprimirMensaje(mensajeString);
+            stringUsuario = sc.nextLine();
+        } while (aniadirSinDuplicados(stringUsuario, array));
+
+        return stringUsuario;
+    }
+
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         ArrayList<String> Marca = new ArrayList<String>();
         ArrayList<Integer> PotenciaEnCv = new ArrayList<Integer>();
         ArrayList<String> Trabajo = new ArrayList<String>();
         int opcion;
-        boolean finPrograma = false;
         final int OPCIONMAX = 4;
         final int OPCIONMIN = 0;
         final int CERO = 0;
@@ -73,7 +98,7 @@ public class TractoMatch {
         mostrarMenu();
         opcion = leerOpcionMenu(OPCIONMIN, OPCIONMAX, scanner);
 
-        while (!finPrograma) {
+        while (!(opcion == CERO)) {
             
             if (opcion == UNO) {
                 System.out.println("Introduzca la marca de su tractor: ");
@@ -88,11 +113,14 @@ public class TractoMatch {
                 }
 
                 System.out.println("Introduzca el tipo de trabajo de su tractor: ");
+                trabajoTractor = scanner.nextLine();
+                while (!trabajoTractor.equals("arado") && !trabajoTractor.equals("transporte") && !trabajoTractor.equals("siembra")) {
+                    System.out.println("Tipo de trabajo invalido.");
+                    System.out.println("Introduzca el tipo de trabajo de su tractor: ");
                     trabajoTractor = scanner.nextLine();
-                    if (trabajoTractor.equals("arado") || trabajoTractor.equals("transporte") || trabajoTractor.equals("siembra")) {
-                        Trabajo.add(trabajoTractor);
                 }
-
+                Trabajo.add(trabajoTractor);
+                
             }
             if (opcion == DOS) {
                 for (int i = 0; i < Marca.size(); i++) {
@@ -123,8 +151,44 @@ public class TractoMatch {
                     System.out.println("Resultado: " + resultado);
                 }
             }
+            if (opcion == CUATRO) {
+                pedirIndice = leerInt("Introduzca el indice del tractor que desea eliminar: ", scanner);
+
+                if (pedirIndice < CERO || pedirIndice >= Marca.size()) {
+                    System.out.println("El indice que has introducido es incorrecto");
+                } else {
+                    potenciaTractor = PotenciaEnCv.get(pedirIndice);
+                    trabajoTractor = Trabajo.get(pedirIndice);
+
+                    if (trabajoTractor.equals("arado") && potenciaTractor >= 120) {
+                        resultado = "APTO";
+                        Marca.remove(pedirIndice);
+                        PotenciaEnCv.remove(pedirIndice);
+                        Trabajo.remove(pedirIndice);
+                    } else if (trabajoTractor.equals("transporte") && potenciaTractor >= 90) {
+                        resultado = "APTO";
+                        Marca.remove(pedirIndice);
+                        PotenciaEnCv.remove(pedirIndice);
+                        Trabajo.remove(pedirIndice);
+                    } else if (trabajoTractor.equals("siembra") && potenciaTractor >= 70) {
+                        resultado = "APTO";
+                        Marca.remove(pedirIndice);
+                        PotenciaEnCv.remove(pedirIndice);
+                        Trabajo.remove(pedirIndice);
+                    } else {
+                        resultado = "NO APTO";
+                        Marca.remove(pedirIndice);
+                        PotenciaEnCv.remove(pedirIndice);
+                        Trabajo.remove(pedirIndice);
+                    }
+                    System.out.println("Tractor evaluado y Eliminado: ");
+                    System.out.println(Marca.get(pedirIndice) + " | " + potenciaTractor + " CV | trabajo: " + trabajoTractor);
+                    System.out.println("Resultado: " + resultado);
+                }
+            }
             mostrarMenu();
             opcion = leerOpcionMenu(OPCIONMIN, OPCIONMAX, scanner);
         }
+        System.out.println("Programa Finalizado");
     }
 }
