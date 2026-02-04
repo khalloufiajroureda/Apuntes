@@ -154,7 +154,7 @@ public class TractoMatch {
             }
             if (opcion == CUATRO) {
                 pedirIndice = leerInt("Introduzca el indice del tractor que desea eliminar: ", scanner);
-
+                
                 if (pedirIndice < CERO || pedirIndice >= Marca.size()) {
                     System.out.println("El indice que has introducido es incorrecto");
                 } else {
