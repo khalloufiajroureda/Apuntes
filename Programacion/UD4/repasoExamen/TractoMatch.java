@@ -67,6 +67,8 @@ public class TractoMatch {
         String marcaTractor;
         int potenciaTractor;
         String trabajoTractor;
+        int pedirIndice;
+        String resultado;
 
         mostrarMenu();
         opcion = leerOpcionMenu(OPCIONMIN, OPCIONMAX, scanner);
@@ -79,28 +81,47 @@ public class TractoMatch {
                 Marca.add(marcaTractor);
 
                 potenciaTractor = leerInt("Introduzca la potencia de su tractor: ", scanner);
-                
                 if (potenciaTractor <= CERO) {
                     System.out.println("No se puede introducir un valor negativo");
                 } else {
                     PotenciaEnCv.add(potenciaTractor);
                 }
+
                 System.out.println("Introduzca el tipo de trabajo de su tractor: ");
                     trabajoTractor = scanner.nextLine();
-                    if (trabajoTractor.equals("arado") || trabajoTractor.equals("transporte")
-                            || trabajoTractor.equals("siembra")) {
+                    if (trabajoTractor.equals("arado") || trabajoTractor.equals("transporte") || trabajoTractor.equals("siembra")) {
                         Trabajo.add(trabajoTractor);
                 }
 
             }
             if (opcion == DOS) {
                 for (int i = 0; i < Marca.size(); i++) {
-                    System.out.println((i + 1) + " -> " + Marca.get(i) + " | " + PotenciaEnCv.get(i) + " CV | trabajo: "
+                    System.out.println(i + " -> " + Marca.get(i) + " | " + PotenciaEnCv.get(i) + " CV | trabajo: "
                             + Trabajo.get(i) + ".");
                 }
             }
             if (opcion == TRES) {
-                
+                pedirIndice = leerInt("Introduzca el indice de su tractor: ", scanner);
+
+                if (pedirIndice < CERO || pedirIndice >= Marca.size()) {
+                    System.out.println("El indice que has introducido es incorrecto");
+                } else {
+                    potenciaTractor = PotenciaEnCv.get(pedirIndice);
+                    trabajoTractor = Trabajo.get(pedirIndice);
+
+                    if (trabajoTractor.equals("arado") && potenciaTractor >= 120) {
+                        resultado = "APTO";
+                    } else if (trabajoTractor.equals("transporte") && potenciaTractor >= 90) {
+                        resultado = "APTO";
+                    } else if (trabajoTractor.equals("siembra") && potenciaTractor >= 70) {
+                        resultado = "APTO";
+                    } else {
+                        resultado = "NO APTO";
+                    }
+                    System.out.println("Tractor evaluado:");
+                    System.out.println(Marca.get(pedirIndice) + " | " + potenciaTractor + " CV | trabajo: " + trabajoTractor);
+                    System.out.println("Resultado: " + resultado);
+                }
             }
             mostrarMenu();
             opcion = leerOpcionMenu(OPCIONMIN, OPCIONMAX, scanner);
