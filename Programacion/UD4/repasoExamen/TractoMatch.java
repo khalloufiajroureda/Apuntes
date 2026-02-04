@@ -94,6 +94,7 @@ public class TractoMatch {
         String trabajoTractor;
         int pedirIndice;
         String resultado;
+        String eliminado;
 
         mostrarMenu();
         opcion = leerOpcionMenu(OPCIONMIN, OPCIONMAX, scanner);
@@ -157,33 +158,11 @@ public class TractoMatch {
                 if (pedirIndice < CERO || pedirIndice >= Marca.size()) {
                     System.out.println("El indice que has introducido es incorrecto");
                 } else {
-                    potenciaTractor = PotenciaEnCv.get(pedirIndice);
-                    trabajoTractor = Trabajo.get(pedirIndice);
-
-                    if (trabajoTractor.equals("arado") && potenciaTractor >= 120) {
-                        resultado = "APTO";
-                        Marca.remove(pedirIndice);
+                        eliminado = Marca.remove(pedirIndice);
                         PotenciaEnCv.remove(pedirIndice);
                         Trabajo.remove(pedirIndice);
-                    } else if (trabajoTractor.equals("transporte") && potenciaTractor >= 90) {
-                        resultado = "APTO";
-                        Marca.remove(pedirIndice);
-                        PotenciaEnCv.remove(pedirIndice);
-                        Trabajo.remove(pedirIndice);
-                    } else if (trabajoTractor.equals("siembra") && potenciaTractor >= 70) {
-                        resultado = "APTO";
-                        Marca.remove(pedirIndice);
-                        PotenciaEnCv.remove(pedirIndice);
-                        Trabajo.remove(pedirIndice);
-                    } else {
-                        resultado = "NO APTO";
-                        Marca.remove(pedirIndice);
-                        PotenciaEnCv.remove(pedirIndice);
-                        Trabajo.remove(pedirIndice);
-                    }
-                    System.out.println("Tractor evaluado y Eliminado: ");
-                    System.out.println(Marca.get(pedirIndice) + " | " + potenciaTractor + " CV | trabajo: " + trabajoTractor);
-                    System.out.println("Resultado: " + resultado);
+                    System.out.println("El tractor ha sido eliminado correctamente");
+                    System.out.println("El tractor eliminado ha sido: " + eliminado);
                 }
             }
             mostrarMenu();
