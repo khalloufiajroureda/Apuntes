@@ -35,8 +35,7 @@ public class Ejercicio4 {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        ArrayList<String> libros = new ArrayList<>(
-                Arrays.asList("El quijote", "La Biblia", "Manual de resistencia", "La criada"));
+        ArrayList<String> libros = new ArrayList<>(Arrays.asList("El quijote", "La Biblia", "Manual de resistencia", "La criada"));
         ArrayList<Integer> cantidades = new ArrayList<>(Arrays.asList(5, 3, 1, 7));
 
         String opcion = "";
