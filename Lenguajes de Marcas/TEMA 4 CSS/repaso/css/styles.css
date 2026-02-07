@@ -93,6 +93,104 @@
     border-radius: 20%;
 }
 
+.amenazas{
+    display: flex;
+    justify-content: space-around;
+    padding: 1%;
+    background-color: black;
+    color: white;
+}
+
+.amenaza1{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
+    border-style: ridge;
+    border-width: 4px;
+    border-color: red;
+    padding: 1%;
+    background-color: rgb(248, 101, 133);
+}
+
+.amenaza2{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
+    border-style: ridge;
+    border-width: 4px;
+    border-color: rgb(255, 238, 0);
+    padding: 1%;
+    background-color: rgb(248, 101, 133);
+}
+
+.amenaza3{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
+    border-style: ridge;
+    border-width: 4px;
+    border-color: rgb(255, 0, 234);
+    padding: 1%;
+    background-color: rgb(248, 101, 133);
+}
+
+.amenaza4{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
+    border-style: ridge;
+    border-width: 4px;
+    border-color: rgb(25, 0, 255);
+    padding: 1%;
+    background-color: rgb(248, 101, 133);
+}
+
+.amenaza1:hover{
+    background-color: black;
+}
+.amenaza2:hover{
+    background-color: rgb(255, 255, 255);
+    color: red;
+}
+.amenaza3:hover{
+    background-color: black;
+}
+.amenaza4:hover{
+    background-color: rgb(255, 255, 255);
+    color: red;
+}
+
+.amenaza1 img{
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px;
+    width: 150px;
+}
+.amenaza2 img{
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px;
+    width: 150px;
+}
+.amenaza3 img{
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px;
+    width: 150px;
+}
+.amenaza4 img{
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px;
+    width: 150px;
+}
+
+
+
 
 
 
