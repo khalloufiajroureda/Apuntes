@@ -1,50 +1,55 @@
-*{
+* {
     margin: 0%;
     padding: 0%;
     box-sizing: border-box;
 }
 
-#body{
+#body {
     background-color: rgb(255, 255, 255);
 }
 
-.titulos{
+.titulos {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
-.texto{
+.texto {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
-.header{
+.header {
     background-color: black;
     display: flex;
     justify-content: space-between;
     color: white;
     padding: 1%;
 }
-.header a:active{
+
+.header a:active {
     font-weight: bold;
 }
-.header a{
+
+.header a {
     color: white;
     text-decoration: none;
 }
-.header :hover{
+
+.header :hover {
     color: red;
 }
-.header a:hover{
+
+.header a:hover {
     text-decoration: underline;
     color: red;
 }
-.menu{
+
+.menu {
     display: flex;
     justify-content: flex end;
     gap: 20px;
-    list-style: none; 
+    list-style: none;
 }
 
-#section1{
+#section1 {
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -57,7 +62,8 @@
     background-position: center;
     background-color: black;
 }
-.button{
+
+.button {
     background-color: rgba(255, 255, 255, 0.897);
     padding: 5px 10px;
     color: rgb(0, 0, 0);
@@ -65,10 +71,12 @@
     cursor: pointer;
     margin-top: 0.5%;
 }
-.button:hover{
+
+.button:hover {
     transform: scale(1.1);
 }
-.tarjetas{
+
+.tarjetas {
     background-color: black;
     display: flex;
     align-items: center;
@@ -76,7 +84,8 @@
     color: white;
     padding: 1%;
 }
-#tipoTarjeta{
+
+#tipoTarjeta {
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -87,14 +96,16 @@
     padding: 1%;
     background-color: grey;
 }
-#tipoTarjeta:hover{
+
+#tipoTarjeta:hover {
     background-color: red;
 }
-#tipoTarjeta img{
+
+#tipoTarjeta img {
     border-radius: 20%;
 }
 
-.amenazas{
+.amenazas {
     display: flex;
     justify-content: space-around;
     padding: 1%;
@@ -102,7 +113,7 @@
     color: white;
 }
 
-.amenaza1{
+.amenaza1 {
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -114,7 +125,7 @@
     background-color: rgb(248, 101, 133);
 }
 
-.amenaza2{
+.amenaza2 {
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -126,7 +137,7 @@
     background-color: rgb(248, 101, 133);
 }
 
-.amenaza3{
+.amenaza3 {
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -138,7 +149,7 @@
     background-color: rgb(248, 101, 133);
 }
 
-.amenaza4{
+.amenaza4 {
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -150,55 +161,135 @@
     background-color: rgb(248, 101, 133);
 }
 
-.amenaza1:hover{
+.amenaza1:hover {
     background-color: black;
 }
-.amenaza2:hover{
-    background-color: rgb(255, 255, 255);
-    color: red;
-}
-.amenaza3:hover{
-    background-color: black;
-}
-.amenaza4:hover{
+
+.amenaza2:hover {
     background-color: rgb(255, 255, 255);
     color: red;
 }
 
-.amenaza1 img{
+.amenaza3:hover {
+    background-color: black;
+}
+
+.amenaza4:hover {
+    background-color: rgb(255, 255, 255);
+    color: red;
+}
+
+.amenaza1 img {
     border: 1px solid #ddd;
     border-radius: 4px;
     padding: 5px;
     width: 150px;
 }
-.amenaza2 img{
+.amenaza1 img:hover{
+    transform: scale(1.1);
+}
+
+.amenaza2 img {
     border: 1px solid #ddd;
     border-radius: 4px;
     padding: 5px;
     width: 150px;
 }
-.amenaza3 img{
+.amenaza2 img:hover{
+    transform: scale(1.1);
+}
+
+.amenaza3 img {
     border: 1px solid #ddd;
     border-radius: 4px;
     padding: 5px;
     width: 150px;
 }
-.amenaza4 img{
+.amenaza3 img:hover{
+    transform: scale(1.1);
+}
+
+.amenaza4 img {
     border: 1px solid #ddd;
     border-radius: 4px;
     padding: 5px;
     width: 150px;
 }
-.campañas{
+.amenaza4 img:hover{
+    transform: scale(1.1);
+}
+
+.campañas {
     display: flex;
     justify-content: space-around;
     padding: 1%;
     background-color: black;
     color: white;
+
 }
 
+.campaña1 {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
+    border-style: ridge;
+    border-width: 4px;
+    padding: 1%;
+}
 
+.campaña2 {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
+    border-style:dashed;
+    border-width: 4px;
+    padding: 1%;
+}
 
+.campaña3 {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
+    border-style: ridge;
+    border-width: 4px;
+    padding: 1%;
+}
+.campaña1 :hover{
+    color: red;
+}
+.campaña2:hover{
+    color: red;
+}
+.campaña3:hover{
+    color: red;
+}
 
+#footer{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: black;
+    color: white;
+    padding: 2%;
+}
 
+.redes{
+    display: flex;
+    justify-content: flex end;
+    gap: 20px;
+    list-style: none;
+    color: white;
+}
 
+.redes a{
+    text-decoration: none;
+    color: white;
+}
+.redes a:hover{
+    color: red;
+    text-decoration: underline;
+}
