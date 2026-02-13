@@ -79,8 +79,13 @@ p{
 
 .pelisDestacadas{
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
     margin: 2%;
+}
+.pelisDestacadas h2{
+    flex-basis: 100%;
+    padding: 1%;
 }
 .pelisDestacadas img{
     border-radius: 10%;
@@ -112,8 +117,13 @@ p{
 
 .personajPopulares{
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
     margin: 0.5%;
+}
+.personajPopulares h2{
+    flex-basis: 100%;
+    padding: 1%;
 }
 
 .personaje1{
@@ -155,7 +165,9 @@ p{
 .personajPopulares img + h3:hover{
     color:rgb(230, 13, 13);
 }
-
+.eventos {
+    margin: 1%;
+}
 .evento1y2{
     background-color: rgb(172, 224, 231);
     list-style: none; 

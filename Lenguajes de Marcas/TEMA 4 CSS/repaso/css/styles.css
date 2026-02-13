@@ -1,3 +1,9 @@
+.bungee-regular {
+    font-family: "Bungee", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+}
+
 * {
     margin: 0%;
     padding: 0%;
@@ -9,7 +15,7 @@
 }
 
 .titulos {
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: "Bungee", sans-serif;
 }
 
 .texto {
@@ -22,6 +28,9 @@
     justify-content: space-between;
     color: white;
     padding: 1%;
+    border-bottom-style: ridge;
+    position: sticky;
+    top: 0px;
 }
 
 .header a:active {
@@ -54,9 +63,9 @@
     align-items: center;
     flex-direction: column;
     align-items: center;
-    font-size: 15px;
+    font-size: 14px;
     color: rgb(255, 255, 255);
-    padding: 9%;
+    padding: 8%;
     background-image: url(img/1.png);
     background-size: cover;
     background-position: center;
@@ -64,24 +73,37 @@
 }
 
 .button {
-    background-color: rgba(255, 255, 255, 0.897);
-    padding: 5px 10px;
-    color: rgb(0, 0, 0);
-    border-radius: 10px;
+    background: #000;
+    color: #fff;
+    width: 220px;
+    height: 50px;
+    padding: 10px 20px;
+    border-radius: 8px;
+    border: 2px solid #fff;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
     cursor: pointer;
-    margin-top: 0.5%;
+    transition-duration: 0.3s;
+    margin: 0.5%;
 }
 
 .button:hover {
     transform: scale(1.1);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 1);
+    color: red;
 }
 
 .tarjetas {
     background-color: black;
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
     color: white;
+    padding: 1%;
+}
+
+.tarjetas h2 {
+    flex-basis: 100%;
     padding: 1%;
 }
 
@@ -107,10 +129,16 @@
 
 .amenazas {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
     padding: 1%;
     background-color: black;
     color: white;
+}
+
+.amenazas h2 {
+    flex-basis: 100%;
+    padding: 1%;
 }
 
 .amenaza1 {
@@ -185,7 +213,8 @@
     padding: 5px;
     width: 150px;
 }
-.amenaza1 img:hover{
+
+.amenaza1 img:hover {
     transform: scale(1.1);
 }
 
@@ -195,7 +224,8 @@
     padding: 5px;
     width: 150px;
 }
-.amenaza2 img:hover{
+
+.amenaza2 img:hover {
     transform: scale(1.1);
 }
 
@@ -205,7 +235,8 @@
     padding: 5px;
     width: 150px;
 }
-.amenaza3 img:hover{
+
+.amenaza3 img:hover {
     transform: scale(1.1);
 }
 
@@ -215,17 +246,24 @@
     padding: 5px;
     width: 150px;
 }
-.amenaza4 img:hover{
+
+.amenaza4 img:hover {
     transform: scale(1.1);
 }
 
 .campañas {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
-    padding: 1%;
+    padding: 2%;
     background-color: black;
     color: white;
 
+}
+
+.campañas h2 {
+    flex-basis: 100%;
+    padding: 1%;
 }
 
 .campaña1 {
@@ -243,7 +281,7 @@
     align-items: center;
     flex-direction: column;
     justify-content: space-around;
-    border-style:dashed;
+    border-style: dashed;
     border-width: 4px;
     padding: 1%;
 }
@@ -257,27 +295,31 @@
     border-width: 4px;
     padding: 1%;
 }
-.campaña1 :hover{
-    color: red;
-}
-.campaña2:hover{
-    color: red;
-}
-.campaña3:hover{
+
+.campaña1 :hover {
     color: red;
 }
 
-#footer{
+.campaña2:hover {
+    color: red;
+}
+
+.campaña3:hover {
+    color: red;
+}
+
+#footer {
     display: flex;
     align-items: center;
     flex-direction: column;
     justify-content: space-around;
     background-color: black;
     color: white;
-    padding: 2%;
+    padding: 1%;
+    border-top-style: ridge;
 }
 
-.redes{
+.redes {
     display: flex;
     justify-content: flex end;
     gap: 20px;
@@ -285,11 +327,12 @@
     color: white;
 }
 
-.redes a{
+.redes a {
     text-decoration: none;
     color: white;
 }
-.redes a:hover{
+
+.redes a:hover {
     color: red;
     text-decoration: underline;
 }
