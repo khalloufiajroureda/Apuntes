@@ -1,5 +1,8 @@
 package Programacion.UD5.R2.Ejercicio3;
 
+import java.util.ArrayList;
+
+
 public class Producto {
     
     private int id;
@@ -7,6 +10,7 @@ public class Producto {
     private String descripcion;
     private double precio;
     private double cantidadEnStock;
+    ArrayList<Producto> aleatorio;
 
     public Producto(int id, String nombre, String descripcion, double precio, double cantidadEnStock) {
         this.id = id;
@@ -14,6 +18,16 @@ public class Producto {
         this.descripcion = descripcion;
         this.precio = precio;
         this.cantidadEnStock = cantidadEnStock;
+        setNombre(nombre);
+        setPrecio(precio);
+        setCantidadEnStock(cantidadEnStock);
+        setDescripcion(descripcion);
+    }
+
+    
+
+    public Producto() {
+        this.aleatorio = new ArrayList<>();
     }
 
     public int getId() {
