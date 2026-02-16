@@ -59,28 +59,6 @@ public class Faker {
             160, 170, 180, 190, 200, 220, 240, 260, 280, 300
     };
 
-    private static final String[] descripcionesProductos = {
-            "Producto fresco de alta calidad",
-            "Ideal para consumo diario",
-            "Rico en nutrientes esenciales",
-            "Perfecto para cocinar en casa",
-            "Sabor auténtico y natural",
-            "Producto seleccionado cuidadosamente",
-            "Listo para consumir",
-            "Excelente relación calidad-precio",
-            "Producto popular entre clientes",
-            "Conservado en condiciones óptimas",
-            "Fuente de energía natural",
-            "Ingredientes de primera calidad",
-            "Producto tradicional",
-            "Fácil de preparar",
-            "Perfecto para toda la familia",
-            "Textura suave y agradable",
-            "Sabor intenso",
-            "Producto imprescindible en el hogar",
-            "Alta durabilidad",
-            "Envasado de forma segura"
-    };
 
     /**
      * Genera un número entero aleatorio entre min y max (inclusive).
@@ -112,6 +90,12 @@ public class Faker {
     public static double precio(double min, double max) {
         return entero((int) min * 100, (int) max * 100) / 100.0;
     }
+    public static double preciosProductos(double min, double max) {
+        return entero((int) min * 100, (int) max * 100) / 100.0;
+    }
+    public static double stockProductos(double min, double max) {
+        return entero((int) min * 100, (int) max * 100) / 100.0;
+    }
 
     /**
      * Genera un nombre aleatorio.
@@ -121,6 +105,10 @@ public class Faker {
     public static String nombre() {
         int posicionAleatoria = entero(0, nombres.length - 1);
         return nombres[posicionAleatoria];
+    }
+    public static String nombresProductos() {
+        int posicionAleatoria = entero(0, nombresProductos.length - 1);
+        return nombresProductos[posicionAleatoria];
     }
 
     /**

@@ -4,38 +4,33 @@ import java.util.ArrayList;
 
 
 public class Producto {
-    
-    private int id;
+    private static int numeroProductos = 0;
+    private String id;
     private String nombre;
     private String descripcion;
     private double precio;
-    private double cantidadEnStock;
+    private int cantidadEnStock;
     ArrayList<Producto> aleatorio;
 
-    public Producto(int id, String nombre, String descripcion, double precio, double cantidadEnStock) {
-        this.id = id;
+    public Producto(String nombre, String descripcion, double precio, int cantidadEnStock) {
+        setId();
         this.nombre = nombre;
         this.descripcion = descripcion;
-        this.precio = precio;
-        this.cantidadEnStock = cantidadEnStock;
-        setNombre(nombre);
         setPrecio(precio);
         setCantidadEnStock(cantidadEnStock);
-        setDescripcion(descripcion);
     }
-
-    
 
     public Producto() {
         this.aleatorio = new ArrayList<>();
     }
 
-    public int getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    private void setId(){
+        this.id = "P-" + numeroProductos;
+        numeroProductos++;
     }
 
     public String getNombre() {
@@ -58,30 +53,30 @@ public class Producto {
         return precio;
     }
 
-    public void setPrecio(double precio) {
-        this.precio = precio;
+    public boolean setPrecio(double precio) {
+        boolean precioCorrecto = false;
+        if (precio >=0) {
+            this.precio = precio;
+            precioCorrecto = true;
+        }
+        return precioCorrecto;
     }
 
-    public double  getCantidadEnStock() {
+    public int  getCantidadEnStock() {
         return cantidadEnStock;
     }
 
-    public void setCantidadEnStock( double cantidadEnStock) {
-        this.cantidadEnStock = cantidadEnStock;
+    public boolean setCantidadEnStock( int cantidadEnStock) {
+        boolean stockCorrecto = false;
+        if (cantidadEnStock >=0) {
+            this.cantidadEnStock = cantidadEnStock;
+            stockCorrecto = true;
+        }
+        return stockCorrecto;
     }
 
     @Override
     public String toString() {
-        StringBuilder sb = new StringBuilder();
-        sb.append("Producto{");
-        sb.append("id=").append(id);
-        sb.append(", nombre=").append(nombre);
-        sb.append(", descripcion=").append(descripcion);
-        sb.append(", precio=").append(precio);
-        sb.append(", cantidadEnStock=").append(cantidadEnStock);
-        sb.append('}');
-        return sb.toString();
+        return nombre + ": " + descripcion + " PRECIO: " + precio + "€.\n--Unidades en Stock: " + cantidadEnStock;
     }
-
-
 }
