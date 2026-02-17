@@ -1,4 +1,4 @@
-public class main {
+public class ejercicio5 {
     public static void main(String[] args) {
         Cancion cancion1 = new Cancion("No me quiero casar", "Bad Bunny", 2.5);
         Cancion cancion2 = new Cancion("Quizas, Tal vez", "Eladio Carrion", 3);
