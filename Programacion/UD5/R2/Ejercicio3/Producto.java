@@ -10,7 +10,6 @@ public class Producto {
     private String descripcion;
     private double precio;
     private int cantidadEnStock;
-    ArrayList<Producto> aleatorio;
 
     public Producto(String nombre, String descripcion, double precio, int cantidadEnStock) {
         setId();
