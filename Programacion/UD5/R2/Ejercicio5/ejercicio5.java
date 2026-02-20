@@ -8,8 +8,7 @@ public class ejercicio5 {
         Kinepolis.agregarPelicula(pelicula1);
         Kinepolis.agregarPelicula(pelicula2);
         Kinepolis.agregarPelicula(pelicula3);
-        Kinepolis.buscarPelicula("Titanic");
         System.out.println(Kinepolis);
-
+        System.out.println(Kinepolis.buscarPelicula("Forest Gump"));
     }
 }

@@ -33,7 +33,7 @@ public class Cancion {
 
     @Override
     public String toString() {
-        return "Titulo de la Cancion --> " + titulo + " | Artista --> " + artista + " | Duracion --> " + duracion + " min";
+        return  titulo + " de: " + artista + " | Duracion --> " + duracion + " seg";
     }
 
 }

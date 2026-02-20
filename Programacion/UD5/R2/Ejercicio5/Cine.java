@@ -18,7 +18,7 @@ public class Cine {
     public boolean buscarPelicula(String peliculaAbuscar) {
         boolean peliculaEncontrada = false;
         for (int i = 0; i < Peliculas.size(); i++) {
-            if (Peliculas.getTitulo(i).equals(peliculaAbuscar)) {
+            if (Peliculas.get(i).getTitulo().equals(peliculaAbuscar)) {
                 peliculaEncontrada = true;
             }
         }
