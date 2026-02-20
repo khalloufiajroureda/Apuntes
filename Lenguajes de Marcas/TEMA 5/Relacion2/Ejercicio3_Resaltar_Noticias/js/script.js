@@ -1,8 +1,10 @@
 const noticias = document.getElementsByClassName("noticia")
-const emojis = document.getElementsByClassName("noticia")
-for (const noticia of noticias) {
-    noticia.style.backgroundColor = "lightgray"
-}
-for (let emoji of emojis) {
-    emoji.innerHTML = "🔥" + emoji.innerHTML;
+
+    for (let i = 0; i < noticias.length; i++) {
+        if (i % 2 == 0) {
+            noticias[i].style.backgroundColor = "lightgray"
+        } else {
+            noticias[i].style.backgroundColor = "blue"
+        }
+        noticias[i].textContent = "🔥" + noticias[i].textContent
     }

@@ -1,1 +1,1 @@
-const imagen = document.getElementById("imagen").src = "img/messi.jpg";
+document.getElementById("imagen").src = "img/messi.jpg";
