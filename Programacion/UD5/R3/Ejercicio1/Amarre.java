@@ -11,8 +11,28 @@ public class Amarre {
         this.numero = numero;
         this.longitudMaxima = longitudMaxima;
         this.ocupado = ocupado;
-        this.tipoAmarre = tipoAmarre;
     }
+    public tipoAmarre (String tipoAmarre) {
+        if(tipoAmarre.equals("Normal") || tipoAmarre.equals("Premium") || tipoAmarre.equals("Megayate")) {
+            this.tipoAmarre = tipoAmarre;
+        } else {
+            System.out.println("Tipo de amarre no valido");
+        }
+    }
+    public precioDia(String tipoAmarre, double precioDia, double longitudMaxima){
+        this.tipoAmarre = tipoAmarre;
+        this.precioDia = precioDia;
+        this.longitudMaxima = longitudMaxima;
+
+        if(tipoAmarre.equals("Normal")){
+            this.precioDia = 25 + (1.5 * longitudMaxima)
+        } else if (tipoAmarre.equals("Premium")) {
+            this.precioDia = 60 + (2.2 * longitudMaxima)
+        } else {
+            this.precioDia = 120 + (3.5 * longitudMaxima)
+        }
+    }
+
 
     public int getNumero(){
         return numero;
@@ -46,6 +66,7 @@ public class Amarre {
     }
 
     public cambiarPrecioDia () {
-
     }
+
+
 }
