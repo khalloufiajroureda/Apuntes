@@ -1,7 +1,5 @@
 import java.util.ArrayList;
 
-import Programacion.UD5.R2.Ejercicio3.Producto;
-
 public class Playlist {
 
     ArrayList<Cancion> canciones;
