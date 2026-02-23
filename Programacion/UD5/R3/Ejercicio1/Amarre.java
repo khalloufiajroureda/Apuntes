@@ -3,14 +3,52 @@ import java.util.ArrayList;
 public class Amarre {
     private int numero;
     private double longitudMaxima;
-    public double precioDia;
+    private double precioDia;
     private boolean ocupado;
-    public String tipoAmarre;
+    private String tipoAmarre;
 
-    public Amarre(double longitudMaxima, boolean ocupado, String tipoAmarre) {
+    public Amarre(int numero, double longitudMaxima, double precioDia, boolean ocupado, String tipoAmarre) {
+        this.numero = numero;
         this.longitudMaxima = longitudMaxima;
+        this.precioDia = precioDia;
         this.ocupado = ocupado;
         this.tipoAmarre = tipoAmarre;
+    }
+
+    public int getNumero() {
+        return numero;
+    }
+
+    public void setNumero(int numero) {
+        if (numero > 0) {
+            this.numero = numero;
+        }
+    }
+
+    private void imprimirMensajeError(String mensajeError) {
+        System.out.println(mensajeError);
+    }
+
+    public double getLongitudMaxima() {
+        if (longitudMaxima == -1) {
+            imprimirMensajeError("Longitud máxima con valor eroneo al ser menor de 4.0M.");
+        }
+        return longitudMaxima;
+    }
+
+    public void setLongitudMaxima(double longitudMaxima) {
+        if (longitudMaxima >= 4.0) {
+            this.longitudMaxima = longitudMaxima;
+        } else {
+            this.longitudMaxima = -1;
+        }
+    }
+
+    public double getPrecioDia() {
+        return precioDia;
+    }
+
+    public void setPrecioDia(double precioDia) {
 
         if (tipoAmarre.equalsIgnoreCase("Normal")) {
             this.precioDia = 25 + (1.5 * longitudMaxima);
@@ -21,32 +59,6 @@ public class Amarre {
         }
     }
 
-    public int getNumero() {
-        return numero;
-    }
-
-    public boolean setNumero(int numero) {
-        boolean numeroNoValido = false;
-        if (numero > 0) {
-            this.numero = numero;
-            numeroNoValido = true;
-        }
-        return numeroNoValido;
-    }
-
-    public double getLongitudMaxima() {
-        return longitudMaxima;
-    }
-
-    public boolean setLongitudMaxima(double longitudMaxima) {
-        boolean logitudNoValida = false;
-        if (longitudMaxima >= 4) {
-            this.longitudMaxima = longitudMaxima;
-            logitudNoValida = true;
-        }
-        return logitudNoValida;
-    }
-
     public boolean getOcupado() {
         return ocupado;
     }
@@ -55,10 +67,20 @@ public class Amarre {
         this.ocupado = ocupado;
     }
 
+    public String getTipoAmarre() {
+        return tipoAmarre;
+    }
+
+    public void setTipoAmarre(String tipoAmarre) {
+        if (tipoAmarre.equalsIgnoreCase("Normal") || tipoAmarre.equalsIgnoreCase("Premium") || tipoAmarre.equalsIgnoreCase("Megayate"))) {
+            this.tipoAmarre = tipoAmarre;
+        }
+    }
+
     @Override
     public String toString() {
-        return "Longitud Maxima --> " + longitudMaxima + " metros | Precio por Dia --> " + precioDia
-                + "€ | ocupado --> " + ocupado + " | Tipo de Amarre --> " + tipoAmarre;
+        return "Amarre: " + numero + " Con longitud Maxima de " + getLongitudMaxima() + " metros | Precio por Dia --> " + getPrecioDia()
+                + "€/Dia | ocupado --> " + ocupado + " | Tipo de Amarre --> " + getPrecioDia();
     }
 
 }

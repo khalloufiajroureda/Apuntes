@@ -7,14 +7,7 @@ public class main {
                 200000);
         System.out.println(embarcacion1);
 
-        Amarre amarre1 = new Amarre(15, true, "Normal");
-
-        ArrayList<String> tiposAmarresValidos = new ArrayList<>(Arrays.asList("Normal", "Premium", "Megayate"));
-        if (!tiposAmarresValidos.contains(amarre1.tipoAmarre)) {
-            System.out.println("Tipo de amarre NO válido");
-        } else {
-            System.out.println(amarre1);
-        }
-
+        Amarre amarre1 = new Amarre(10, 10, 0, false, "normal");
+        System.out.println(amarre1);
     }
 }

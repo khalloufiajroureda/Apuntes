@@ -22,7 +22,7 @@ public class Embarcacion {
         return matricula;
     }
     public void setMatricula() {
-        if (matricula != null || !matricula.isEmpty()) {
+        if (matricula == null || matricula.isBlank()) {
             this.matricula = "EM-" + numeroEmbarcaciones;
             numeroEmbarcaciones++;
         }
@@ -38,26 +38,20 @@ public class Embarcacion {
     public double getEslora(){
         return eslora;
     }
-    public boolean setEslora(double eslora) {
-        boolean menor = false;
+    public void setEslora(double eslora) {
         if (eslora > 0) {
             this.eslora = eslora;
-            menor = true;
         }
-        return menor;
     }
 
     public String getTipo(){
         return tipo;
     }
 
-    public boolean setTipo(String tipo) {
-        boolean noEsTipoValido = false;
-        if (tipo == "Velero" || tipo == "Lancha" || tipo == "Yate" || tipo == "Catamarán" || tipo == "Moto de agua") {
+    public void setTipo(String tipo) {
+        if (tipo.equalsIgnoreCase("Velero") || tipo.equalsIgnoreCase("Lancha") || tipo.equalsIgnoreCase("Yate") || tipo.equalsIgnoreCase("Catamarán") || tipo.equalsIgnoreCase("Moto de agua")) {
             this.tipo = tipo;
-            noEsTipoValido = true;
         }
-        return noEsTipoValido;
     }
 
     public String getPropietario(){
@@ -72,19 +66,16 @@ public class Embarcacion {
         return anioFabricacion;
     }
 
-    public boolean setAnioFabricacion(int anioFabricacion) {
-        boolean añoNoValido = false;
+    public void setAnioFabricacion(int anioFabricacion) {
         if (anioFabricacion >= 1950 && anioFabricacion <= 2026) {
             this.anioFabricacion = anioFabricacion;
-            añoNoValido = true;
         }
-        return añoNoValido;
     }
 
     @Override
     public String toString() {
-        return nombre + " | Tamaño del barco --> " + setEslora(eslora) + "Kg | tipo --> " + setTipo(tipo) + " | propietario --> "
-                + propietario + " |  Año de fabricacion --> " + setAnioFabricacion(anioFabricacion) + " | Precio del Barco --> " + valorEstimado + "€";
+        return nombre + ": Matricula --> " + matricula + " | Tamaño del barco --> " + eslora + "Kg | tipo --> " + tipo + " | propietario --> "
+                + propietario + " |  Año de fabricacion --> " + anioFabricacion + " | Precio del Barco --> " + valorEstimado + "€";
     }
 
 }
