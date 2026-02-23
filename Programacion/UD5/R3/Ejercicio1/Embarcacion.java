@@ -8,13 +8,13 @@ public class Embarcacion {
     private int anioFabricacion;
     public double valorEstimado;
 
-    public Embarcacion(String matricula, String nombre, double eslora, String tipo, String propietario, int anioFabricacion, double valorEstimado) {
-        this.matricula = matricula;
+    public Embarcacion(String nombre, double eslora, String tipo, String propietario, int anioFabricacion, double valorEstimado) {
+        setMatricula();
         this.nombre = nombre;
-        this.eslora = eslora;
-        this.tipo = tipo;
+        setEslora(eslora);
+        setTipo(tipo);
         this.propietario = propietario;
-        this.anioFabricacion = anioFabricacion;
+        setAnioFabricacion(anioFabricacion);
         this.valorEstimado = valorEstimado;
     }
 
@@ -83,8 +83,8 @@ public class Embarcacion {
 
     @Override
     public String toString() {
-        return nombre + " | Tamaño del barco --> " + eslora + "Kg | tipo --> " + tipo + " | propietario --> "
-                + propietario + " |  Año de fabricacion --> " + anioFabricacion + " | Precio del Barco --> " + valorEstimado + "€";
+        return nombre + " | Tamaño del barco --> " + setEslora(eslora) + "Kg | tipo --> " + setTipo(tipo) + " | propietario --> "
+                + propietario + " |  Año de fabricacion --> " + setAnioFabricacion(anioFabricacion) + " | Precio del Barco --> " + valorEstimado + "€";
     }
 
 }

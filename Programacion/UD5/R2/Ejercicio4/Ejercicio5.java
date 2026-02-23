@@ -2,7 +2,7 @@ public class Ejercicio5 {
     public static void main(String[] args) {
         Cancion cancion1 = new Cancion("No me quiero casar", "Bad Bunny", 2.5);
         Cancion cancion2 = new Cancion("Quizas, Tal vez", "Eladio Carrion", 3);
-        Cancion cancion3 = new Cancion("Ojitos feat Fabriell", "Dei V", 3.2);
+        Cancion cancion3 = new Cancion("Ojitos feat Fabriell", "Dei V", 3);
 
         Playlist summerVibes = new Playlist();
         summerVibes.agregarCancion(cancion1);
@@ -10,7 +10,7 @@ public class Ejercicio5 {
         summerVibes.agregarCancion(cancion3);
         System.out.println(summerVibes);
         System.out.println("Duracion total de la PlayList --> " + summerVibes.calcularDuracionPlaylist() + " min");
-        PlayList playlist1 = new Playlist("Ojitos feat Fabriell", "Dei V", 3.2);
+        Playlist playlist1 = new Playlist("Ojitos feat Fabriell", "Dei V", 3);
     }
 }
 
