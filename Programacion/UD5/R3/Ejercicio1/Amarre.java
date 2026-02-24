@@ -1,27 +1,28 @@
 import java.util.ArrayList;
 
 public class Amarre {
+    private static int numeroAmarres = 1;
     private int numero;
     private double longitudMaxima;
     private double precioDia;
     private boolean ocupado;
     private String tipoAmarre;
 
-    public Amarre(int numero, double longitudMaxima, double precioDia, boolean ocupado, String tipoAmarre) {
-        this.numero = numero;
+    public Amarre(double longitudMaxima, String tipoAmarre) {
+        setNumero();
         this.longitudMaxima = longitudMaxima;
-        this.precioDia = precioDia;
-        this.ocupado = ocupado;
         this.tipoAmarre = tipoAmarre;
+        calcularPrecioDia();
     }
 
     public int getNumero() {
         return numero;
     }
 
-    public void setNumero(int numero) {
+    public void setNumero() {
         if (numero > 0) {
-            this.numero = numero;
+            this.numero = numeroAmarres;
+            numeroAmarres++;
         }
     }
 
@@ -48,7 +49,7 @@ public class Amarre {
         return precioDia;
     }
 
-    public void setPrecioDia(double precioDia) {
+    public void calcularPrecioDia() {
 
         if (tipoAmarre.equalsIgnoreCase("Normal")) {
             this.precioDia = 25 + (1.5 * longitudMaxima);
@@ -63,7 +64,7 @@ public class Amarre {
         return ocupado;
     }
 
-    public void setOcupado(boolean ocupado) {
+    public void isOcupado(boolean ocupado) {
         this.ocupado = ocupado;
     }
 
@@ -72,15 +73,14 @@ public class Amarre {
     }
 
     public void setTipoAmarre(String tipoAmarre) {
-        if (tipoAmarre.equalsIgnoreCase("Normal") || tipoAmarre.equalsIgnoreCase("Premium") || tipoAmarre.equalsIgnoreCase("Megayate"))) {
+        if (tipoAmarre.equalsIgnoreCase("Normal") || tipoAmarre.equalsIgnoreCase("Premium") || tipoAmarre.equalsIgnoreCase("Megayate")) {
             this.tipoAmarre = tipoAmarre;
         }
     }
 
     @Override
     public String toString() {
-        return "Amarre: " + numero + " Con longitud Maxima de " + getLongitudMaxima() + " metros | Precio por Dia --> " + getPrecioDia()
-                + "€/Dia | ocupado --> " + ocupado + " | Tipo de Amarre --> " + getPrecioDia();
+        return "Amarre: " + numero + " Con longitud Maxima de " + getLongitudMaxima() + " metros | Precio por Dia --> " + getPrecioDia() + "€/Dia | ocupado --> " + ocupado + " | Tipo de Amarre --> " + getTipoAmarre();
     }
 
 }
