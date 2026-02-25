@@ -15,6 +15,7 @@ public class Cliente {
         this.email = email;
         this.direccion = direccion;
     }
+    public Cliente(){};
 
     public int getId() {
         return id;
