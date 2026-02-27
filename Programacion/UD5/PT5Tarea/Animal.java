@@ -1,3 +1,5 @@
+package Programacion.UD5.PT5Tarea;
+
 public class Animal {
     private String nombre;
     private String codigo;
@@ -10,6 +12,8 @@ public class Animal {
         this.cantidad = cantidad;
         this.precio = precio;
     }
+
+    public Animal (){}
 
     public String getNombre() {
         return nombre;
@@ -45,7 +49,7 @@ public class Animal {
 
     @Override
     public String toString() {
-        return "Código: " + codigo + " | Nombre: " + nombre + " | Cantidad: " + cantidad + " | Precio: " + precio + "€";
+        return "Código: " + codigo + " | Nombre: " + nombre + " | Cantidad: " + cantidad + " | Precio: " + precio + "€\n";
 
     }
 }
