@@ -30,10 +30,30 @@ public class Zoologico {
         return mostrarAnimal;
     }
 
+    public String buscarAnimal(String codigo) {
+        String animalEncontrado = "Animal no encontrado";
+        for (int i = 0; i < animales.size(); i++) {
+            if (animales.get(i).getCodigo().equals(String.valueOf(codigo))) {
+                animalEncontrado = "Animal encontrado: \n" + animales.get(i);
+            }
+        }
+        return animalEncontrado;
+    }
+
+    public String agregarEjemplares(String codigo, int cantidad) {
+        String mensaje = "Animal no encontrado";
+        for (int i = 0; i < animales.size(); i++) {
+            if (animales.get(i).getCodigo().equals(codigo)) {
+                animales.get(i).setCantidad(animales.get(i).getCantidad() + cantidad);
+                mensaje = "Ejemplares agregados correctamente";
+            }
+        }
+        return mensaje;
+    }
 
 
 
-    
+
 
 
 

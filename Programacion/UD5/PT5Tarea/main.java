@@ -51,6 +51,24 @@ public class main {
         return opcion;
     }
 
+    public static String comprobarCodigoValido(String mensaje, Scanner sc) {
+        String codigo = "";
+        boolean correcto = false;
+
+        while (!correcto) {
+            imprimirMensaje(mensaje);
+            codigo = sc.nextLine().trim();
+
+            if (codigo.matches("^[A-Z0-9]{6}$")) {
+                correcto = true;
+            } else {
+                imprimirMensaje("Error: Introduce un codigo valido");
+            }
+        }
+
+        return codigo;
+    }
+
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         int opcion;
@@ -81,6 +99,15 @@ public class main {
             if (opcion == UNO) {
                 System.out.println("--------------------------- Listado de Animales ---------------------------");
                 System.out.println(reda.mostrarAnimales());
+            }
+            if (opcion == DOS) {
+                String codigo = comprobarCodigoValido("Introduce el código del animal a buscar:", scanner);
+                System.out.println(reda.buscarAnimal(codigo));
+            }
+            if (opcion == TRES) {
+                String codigo = comprobarCodigoValido("Introduce el código del animal a buscar:", scanner);
+                int cantidad = comprobarNumeroValido("Introduce la cantidad de ejemplares a agregar:", scanner);
+                reda.agregarEjemplares(codigo, cantidad);
             }
 
             mostrarMenu();
