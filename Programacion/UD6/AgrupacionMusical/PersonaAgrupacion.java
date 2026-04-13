@@ -6,9 +6,9 @@ public abstract class PersonaAgrupacion {
     private int antiguedad;
 
     public PersonaAgrupacion(String nombre, int edad, int antiguedad) {
-        this.antiguedad = antiguedad;
-        this.edad = edad;
         this.nombre = nombre;
+        this.edad = edad;
+        this.antiguedad = antiguedad;
     }
 
     public String getNombre() {
