@@ -1,0 +1,47 @@
+package Programacion.UD6.AgrupacionMusical;
+
+public abstract class PersonaAgrupacion {
+    private String nombre;
+    private int edad;
+    private int antiguedad;
+
+    public PersonaAgrupacion(String nombre, int edad, int antiguedad) {
+        this.antiguedad = antiguedad;
+        this.edad = edad;
+        this.nombre = nombre;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public int getEdad() {
+        return edad;
+    }
+
+    public void setEdad(int edad) {
+        this.edad = edad;
+    }
+
+    public int getAntiguedad() {
+        return antiguedad;
+    }
+
+    public void setAntiguedad(int antiguedad) {
+        this.antiguedad = antiguedad;
+    }
+
+    public abstract double calcularAportacion();
+    public abstract boolean puedeParticipar();
+
+    public void cumplirAnio() {
+        edad++;
+    }
+    public void aumentarAntiguedad() {
+        antiguedad++;
+    }
+}
